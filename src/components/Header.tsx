@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { whatsappLink, site } from "../lib/site";
+import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 const nav = [
   { to: "/", label: "Início" },
@@ -45,23 +46,20 @@ export function Header() {
           className="flex items-center gap-3 group"
           aria-label={`${site.name} — Início`}
         >
-          <Logo scrolled={scrolled} />
-          <div className="leading-tight">
-            <div
-              className={`heading-serif text-lg sm:text-xl tracking-tight transition-colors ${
-                scrolled ? "text-[color:var(--forest)]" : "text-white"
-              }`}
-            >
-              Villa das Palmeiras
-            </div>
-            <div
-              className={`text-[10px] uppercase tracking-[0.25em] transition-colors ${
-                scrolled ? "text-[color:var(--gold)]" : "text-white/80"
-              }`}
-            >
-              Hotel · Restaurante · Eventos
-            </div>
-          </div>
+          <span
+            className={`flex items-center justify-center rounded-lg transition-colors duration-300 ${
+              scrolled ? "bg-[color:var(--forest)]" : "bg-[color:var(--forest)]/90"
+            }`}
+            style={{ padding: "0.5rem" }}
+          >
+            <img
+              src={logoImg}
+              alt="Villa das Palmeiras"
+              className="h-10 sm:h-11 w-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
@@ -147,33 +145,5 @@ export function Header() {
         </nav>
       </div>
     </header>
-  );
-}
-
-function Logo({ scrolled }: { scrolled: boolean }) {
-  const color = scrolled ? "var(--forest)" : "#fff";
-  const accent = "var(--gold)";
-  return (
-    <span
-      className="grid size-11 place-items-center rounded-full transition-colors"
-      style={{
-        background: scrolled ? "var(--cream)" : "rgba(255,255,255,0.12)",
-        backdropFilter: "blur(4px)",
-      }}
-      aria-hidden
-    >
-      <svg viewBox="0 0 32 32" className="size-6" fill="none">
-        <path
-          d="M16 4c-1 4-4 6-7 7 3 0 6 1 7 4 1-3 4-4 7-4-3-1-6-3-7-7Z"
-          fill={accent}
-        />
-        <path
-          d="M16 14v14M12 28h8"
-          stroke={color}
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    </span>
   );
 }

@@ -1,14 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { site, whatsappLink } from "../lib/site";
+import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-[color:var(--forest-deep)] text-white/85">
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="heading-serif text-2xl text-white">Villa das Palmeiras</div>
-          <div className="kicker mt-1">Hotel · Restaurante · Eventos</div>
+          <img
+            src={logoImg}
+            alt="Villa das Palmeiras"
+            className="h-14 w-auto rounded-sm"
+            loading="lazy"
+            decoding="async"
+          />
           <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-xs">
             Um refúgio elegante em Moçambique, onde o conforto, a gastronomia e a hospitalidade se unem para criar memórias inesquecíveis.
           </p>
