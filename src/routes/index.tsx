@@ -11,7 +11,8 @@ import roomSuite from "../assets/room-suite.jpg";
 import restaurantImg from "../assets/restaurant.jpg";
 import eventWedding from "../assets/event-wedding.jpg";
 import poolImg from "../assets/pool.jpg";
-import gardenImg from "../assets/garden.jpg";
+import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
+const gardenImg = gardenAsset.url;
 
 
 export const Route = createFileRoute("/")({
