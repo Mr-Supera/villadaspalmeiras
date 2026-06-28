@@ -53,7 +53,7 @@ export function Header() {
             style={{ padding: "0.5rem" }}
           >
             <img
-              src={logoAsset.url}
+              src={logoImg}
               alt="Villa das Palmeiras"
               className="h-10 sm:h-11 w-auto"
               loading="eager"

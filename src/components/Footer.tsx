@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container-luxe py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            src={logoAsset.url}
+            src={logoImg}
             alt="Villa das Palmeiras"
             className="h-14 w-auto rounded-sm"
             loading="lazy"
