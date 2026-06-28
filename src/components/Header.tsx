@@ -34,10 +34,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+      className={`fixed inset-x-0 top-0 z-50 bg-[color:var(--forest)] transition-all duration-500 ${
+        scrolled ? "shadow-sm py-3" : "py-5"
       }`}
     >
       <div className="container-luxe flex items-center justify-between gap-4">
@@ -46,12 +44,7 @@ export function Header() {
           className="flex items-center gap-3 group"
           aria-label={`${site.name} — Início`}
         >
-          <span
-            className={`flex items-center justify-center rounded-lg transition-colors duration-300 ${
-              scrolled ? "bg-[color:var(--forest)]" : "bg-[color:var(--forest)]/90"
-            }`}
-            style={{ padding: "0.5rem" }}
-          >
+          <span className="flex items-center justify-center rounded-lg transition-colors duration-300 bg-[color:var(--forest)]">
             <img
               src={logoImg}
               alt="Villa das Palmeiras"
@@ -67,9 +60,7 @@ export function Header() {
             <Link
               key={item.to}
               to={item.to}
-              className={`text-sm font-medium transition-colors relative py-1 ${
-                scrolled ? "text-[color:var(--foreground)]" : "text-white"
-              } hover:text-[color:var(--gold)]`}
+              className="text-sm font-medium transition-colors relative py-1 text-white hover:text-[color:var(--gold)]"
               activeProps={{
                 className: "text-[color:var(--gold)]",
               }}
@@ -96,7 +87,7 @@ export function Header() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className={`lg:hidden inline-flex items-center justify-center rounded-full size-11 transition-colors ${
-            scrolled || open
+            open
               ? "text-[color:var(--forest)] bg-[color:var(--cream)]"
               : "text-white bg-white/10 backdrop-blur"
           }`}
@@ -147,3 +138,4 @@ export function Header() {
     </header>
   );
 }
+
