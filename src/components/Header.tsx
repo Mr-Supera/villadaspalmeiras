@@ -147,17 +147,3 @@ export function Header() {
     </header>
   );
 }
-
-function Logo({ scrolled }: { scrolled: boolean }) {
-  return (
-    <img
-      src={logoAsset.url}
-      alt="Villa das Palmeiras"
-      className={`h-10 sm:h-11 w-auto transition-all duration-300 rounded-sm ${
-        scrolled ? "" : "drop-shadow-sm"
-      }`}
-      loading="eager"
-      decoding="async"
-    />
-  );
-}
