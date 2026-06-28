@@ -7,7 +7,8 @@ import { whatsappLink } from "../lib/site";
 
 import villaPromoAsset from "../assets/villa-promo.webm.asset.json";
 import heroImg from "../assets/hero.jpg";
-import roomSuite from "../assets/room-suite.jpg";
+import roomSuiteAsset from "../assets/villa-room-real.png.asset.json";
+const roomSuite = roomSuiteAsset.url;
 import restaurantImg from "../assets/restaurant.jpg";
 import eventWedding from "../assets/event-wedding.jpg";
 import poolImg from "../assets/pool.jpg";
