@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { site, whatsappLink } from "../lib/site";
-import logoAsset from "@/assets/villa-das-palmeiras-logo.png.asset.json";
+import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 export function Footer() {
   return (

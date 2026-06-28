@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { whatsappLink, site } from "../lib/site";
-import logoAsset from "@/assets/villa-das-palmeiras-logo.png.asset.json";
+import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 const nav = [
   { to: "/", label: "Início" },
