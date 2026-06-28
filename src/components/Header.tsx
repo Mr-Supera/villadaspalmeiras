@@ -46,23 +46,20 @@ export function Header() {
           className="flex items-center gap-3 group"
           aria-label={`${site.name} — Início`}
         >
-          <Logo scrolled={scrolled} />
-          <div className="leading-tight">
-            <div
-              className={`heading-serif text-lg sm:text-xl tracking-tight transition-colors ${
-                scrolled ? "text-[color:var(--forest)]" : "text-white"
-              }`}
-            >
-              Villa das Palmeiras
-            </div>
-            <div
-              className={`text-[10px] uppercase tracking-[0.25em] transition-colors ${
-                scrolled ? "text-[color:var(--gold)]" : "text-white/80"
-              }`}
-            >
-              Hotel · Restaurante · Eventos
-            </div>
-          </div>
+          <span
+            className={`flex items-center justify-center rounded-lg transition-colors duration-300 ${
+              scrolled ? "bg-[color:var(--forest)]" : "bg-[color:var(--forest)]/90"
+            }`}
+            style={{ padding: "0.5rem" }}
+          >
+            <img
+              src={logoAsset.url}
+              alt="Villa das Palmeiras"
+              className="h-10 sm:h-11 w-auto"
+              loading="eager"
+              decoding="async"
+            />
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
