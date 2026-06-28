@@ -167,7 +167,7 @@ function Home() {
                 className="rounded-2xl shadow-luxe object-cover w-full aspect-[4/5]"
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block bg-[color:var(--forest)] text-white p-8 rounded-2xl max-w-xs">
-                <p className="kicker !text-[color:var(--gold-soft)]">Desde 2010</p>
+                <p className="kicker !text-[color:var(--gold-soft)]">Desde 2023</p>
                 <p className="heading-serif mt-2 text-2xl leading-tight">
                   Hospitalidade que sentimos como sua.
                 </p>
