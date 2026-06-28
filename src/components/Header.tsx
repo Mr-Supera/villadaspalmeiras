@@ -152,29 +152,15 @@ export function Header() {
 }
 
 function Logo({ scrolled }: { scrolled: boolean }) {
-  const color = scrolled ? "var(--forest)" : "#fff";
-  const accent = "var(--gold)";
   return (
-    <span
-      className="grid size-11 place-items-center rounded-full transition-colors"
-      style={{
-        background: scrolled ? "var(--cream)" : "rgba(255,255,255,0.12)",
-        backdropFilter: "blur(4px)",
-      }}
-      aria-hidden
-    >
-      <svg viewBox="0 0 32 32" className="size-6" fill="none">
-        <path
-          d="M16 4c-1 4-4 6-7 7 3 0 6 1 7 4 1-3 4-4 7-4-3-1-6-3-7-7Z"
-          fill={accent}
-        />
-        <path
-          d="M16 14v14M12 28h8"
-          stroke={color}
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    </span>
+    <img
+      src={logoAsset.url}
+      alt="Villa das Palmeiras"
+      className={`h-10 sm:h-11 w-auto transition-all duration-300 rounded-sm ${
+        scrolled ? "" : "drop-shadow-sm"
+      }`}
+      loading="eager"
+      decoding="async"
+    />
   );
 }
