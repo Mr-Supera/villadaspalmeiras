@@ -11,7 +11,8 @@ import roomSuiteAsset from "../assets/villa-room-real.png.asset.json";
 const roomSuite = roomSuiteAsset.url;
 import restaurantImg from "../assets/restaurant.jpg";
 import eventWedding from "../assets/event-wedding.jpg";
-import poolImg from "../assets/pool.jpg";
+import poolAsset from "../assets/villa-pool-real.jpg.asset.json";
+const poolImg = poolAsset.url;
 import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
 const gardenImg = gardenAsset.url;
 
