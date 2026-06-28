@@ -5,12 +5,14 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { whatsappLink } from "../lib/site";
 
+import villaPromoAsset from "../assets/villa-promo.webm.asset.json";
 import heroImg from "../assets/hero.jpg";
 import roomSuite from "../assets/room-suite.jpg";
 import restaurantImg from "../assets/restaurant.jpg";
 import eventWedding from "../assets/event-wedding.jpg";
 import poolImg from "../assets/pool.jpg";
 import gardenImg from "../assets/garden.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,18 +43,22 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative min-h-[100svh] flex items-center justify-center text-white overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Villa das Palmeiras ao pôr do sol com palmeiras e piscina"
-          className="absolute inset-0 size-full object-cover animate-hero-zoom"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={heroImg}
+          className="absolute inset-0 size-full object-cover"
+          aria-label="Villa das Palmeiras ao pôr do sol com palmeiras e piscina"
+        >
+          <source src={villaPromoAsset.url} type="video/webm" />
+        </video>
         <div
           className="absolute inset-0 bg-gradient-to-b from-[color:var(--forest-deep)]/70 via-[color:var(--forest-deep)]/40 to-[color:var(--forest-deep)]/80"
           aria-hidden
         />
+
 
         <div className="relative container-luxe text-center pt-24 pb-16">
           <span className="kicker !text-[color:var(--gold-soft)] animate-fade-soft">
