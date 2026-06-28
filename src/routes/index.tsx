@@ -62,7 +62,7 @@ function Home() {
 
         <div className="relative container-luxe text-center pt-24 pb-16">
           <span className="kicker !text-[color:var(--gold-soft)] animate-fade-soft">
-            Moçambique · desde sempre
+            Moçambique
           </span>
           <h1 className="heading-serif mt-5 text-4xl sm:text-6xl md:text-7xl text-white animate-fade-soft [animation-delay:120ms]">
             Bem-vindo à<br />
