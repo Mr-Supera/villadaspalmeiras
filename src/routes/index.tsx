@@ -11,6 +11,7 @@ import roomSuiteAsset from "../assets/villa-room-real.png.asset.json";
 const roomSuite = roomSuiteAsset.url;
 import restaurantImg from "../assets/restaurant.jpg";
 import eventWedding from "../assets/event-wedding.jpg";
+import eventVideoAsset from "../assets/event-video.mp4.asset.json";
 import poolAsset from "../assets/villa-pool-real.jpg.asset.json";
 const poolImg = poolAsset.url;
 import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
@@ -338,12 +339,14 @@ function Home() {
             </div>
           </Reveal>
           <Reveal delay={150}>
-            <img
-              src={eventWedding}
-              alt="Mesa de casamento decorada à luz de velas"
-              loading="lazy"
-              width={1600}
-              height={1067}
+            <video
+              src={eventVideoAsset.url}
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={eventWedding}
+              aria-label="Mesa de casamento decorada à luz de velas"
               className="rounded-2xl shadow-luxe object-cover w-full aspect-[4/5]"
             />
           </Reveal>
