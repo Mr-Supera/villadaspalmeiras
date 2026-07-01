@@ -339,12 +339,14 @@ function Home() {
             </div>
           </Reveal>
           <Reveal delay={150}>
-            <img
-              src={eventWedding}
-              alt="Mesa de casamento decorada à luz de velas"
-              loading="lazy"
-              width={1600}
-              height={1067}
+            <video
+              src={eventVideoAsset.url}
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={eventWedding}
+              aria-label="Mesa de casamento decorada à luz de velas"
               className="rounded-2xl shadow-luxe object-cover w-full aspect-[4/5]"
             />
           </Reveal>
