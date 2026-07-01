@@ -409,9 +409,6 @@ function Home() {
                 <MessageCircle className="size-4" />
                 Reservar pelo WhatsApp
               </a>
-              <Link to="/contactos" className="btn-forest">
-                Enviar mensagem
-              </Link>
             </div>
           </Reveal>
         </div>
