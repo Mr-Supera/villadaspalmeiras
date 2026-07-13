@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bird, Horse, Duck, Heart, Leaf, MessageCircle } from "lucide-react";
+import { Bird, Heart, Leaf, MessageCircle } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
