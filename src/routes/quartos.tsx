@@ -66,7 +66,7 @@ export const Route = createFileRoute("/quartos")({
       { property: "og:title", content: "Quartos da Villa das Palmeiras" },
       { property: "og:description", content: "Suítes confortáveis num refúgio entre palmeiras." },
       { property: "og:url", content: "/quartos" },
-      { property: "og:image", content: roomSuite },
+      { property: "og:image", content: roomCasaVerde },
     ],
     links: [{ rel: "canonical", href: "/quartos" }],
   }),
@@ -80,7 +80,7 @@ function Quartos() {
         kicker="Hospedagem"
         title="Quartos & Suítes"
         subtitle="Espaços luminosos e silenciosos, com tudo o que precisa para descansar verdadeiramente."
-        image={roomSuite}
+        image={roomCasaVerde}
       />
 
       <section className="py-24 sm:py-32 bg-[color:var(--cream)]">
