@@ -8,6 +8,9 @@ import roomSuite from "../assets/room-suite.jpg";
 import roomDouble from "../assets/room-double.jpg";
 import roomSingle from "../assets/room-single.jpg";
 import roomFamily from "../assets/room-family.jpg";
+import roomStandard from "../assets/room-standard.jpg";
+import roomExecutivo from "../assets/room-executivo.jpg";
+import roomCasaVerde from "../assets/room-casa-verde.jpg";
 
 const features = [
   { icon: Wifi, label: "Wi-Fi grátis" },
