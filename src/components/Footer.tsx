@@ -51,6 +51,7 @@ export function Footer() {
               ["/quartos", "Quartos"],
               ["/restaurante", "Restaurante"],
               ["/eventos", "Eventos"],
+              ["/minizoo", "Mini Zoológico"],
               ["/galeria", "Galeria"],
               ["/contactos", "Contactos"],
             ].map(([to, label]) => (

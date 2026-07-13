@@ -13,6 +13,7 @@ import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RestauranteRouteImport } from './routes/restaurante'
 import { Route as QuartosRouteImport } from './routes/quartos'
+import { Route as MinizooRouteImport } from './routes/minizoo'
 import { Route as GaleriaRouteImport } from './routes/galeria'
 import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as ContactosRouteImport } from './routes/contactos'
@@ -36,6 +37,11 @@ const RestauranteRoute = RestauranteRouteImport.update({
 const QuartosRoute = QuartosRouteImport.update({
   id: '/quartos',
   path: '/quartos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MinizooRoute = MinizooRouteImport.update({
+  id: '/minizoo',
+  path: '/minizoo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GaleriaRoute = GaleriaRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/contactos': typeof ContactosRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
+  '/minizoo': typeof MinizooRoute
   '/quartos': typeof QuartosRoute
   '/restaurante': typeof RestauranteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/contactos': typeof ContactosRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
+  '/minizoo': typeof MinizooRoute
   '/quartos': typeof QuartosRoute
   '/restaurante': typeof RestauranteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/contactos': typeof ContactosRoute
   '/eventos': typeof EventosRoute
   '/galeria': typeof GaleriaRoute
+  '/minizoo': typeof MinizooRoute
   '/quartos': typeof QuartosRoute
   '/restaurante': typeof RestauranteRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/contactos'
     | '/eventos'
     | '/galeria'
+    | '/minizoo'
     | '/quartos'
     | '/restaurante'
     | '/sitemap.xml'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/contactos'
     | '/eventos'
     | '/galeria'
+    | '/minizoo'
     | '/quartos'
     | '/restaurante'
     | '/sitemap.xml'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/contactos'
     | '/eventos'
     | '/galeria'
+    | '/minizoo'
     | '/quartos'
     | '/restaurante'
     | '/sitemap.xml'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   ContactosRoute: typeof ContactosRoute
   EventosRoute: typeof EventosRoute
   GaleriaRoute: typeof GaleriaRoute
+  MinizooRoute: typeof MinizooRoute
   QuartosRoute: typeof QuartosRoute
   RestauranteRoute: typeof RestauranteRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/quartos'
       fullPath: '/quartos'
       preLoaderRoute: typeof QuartosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/minizoo': {
+      id: '/minizoo'
+      path: '/minizoo'
+      fullPath: '/minizoo'
+      preLoaderRoute: typeof MinizooRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/galeria': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactosRoute: ContactosRoute,
   EventosRoute: EventosRoute,
   GaleriaRoute: GaleriaRoute,
+  MinizooRoute: MinizooRoute,
   QuartosRoute: QuartosRoute,
   RestauranteRoute: RestauranteRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
