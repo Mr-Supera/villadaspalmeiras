@@ -4,10 +4,6 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import roomSuite from "../assets/room-suite.jpg";
-import roomDouble from "../assets/room-double.jpg";
-import roomSingle from "../assets/room-single.jpg";
-import roomFamily from "../assets/room-family.jpg";
 import roomStandard from "../assets/room-standard.jpg";
 import roomExecutivo from "../assets/room-executivo.jpg";
 import roomCasaVerde from "../assets/room-casa-verde.jpg";
@@ -56,46 +52,6 @@ const rooms = [
     amenities: includedAmenities,
     featured: true,
   },
-  {
-    name: "Suíte de Luxo",
-    img: roomSuite,
-    capacity: "2 pessoas",
-    price: "12.000 MT",
-    shortDesc: "A nossa suíte mais espaçosa com varanda privada e vista para o jardim.",
-    desc: "A nossa suíte mais espaçosa — cama king-size, sala de estar, varanda privada e vista para o jardim tropical.",
-    amenities: includedAmenities,
-    featured: false,
-  },
-  {
-    name: "Quarto Duplo",
-    img: roomDouble,
-    capacity: "2 pessoas",
-    price: "7.000 MT",
-    shortDesc: "Confortável e elegante, com duas camas para uma estadia tranquila.",
-    desc: "Confortável e elegante, com duas camas e toda a comodidade para uma estadia tranquila.",
-    amenities: includedAmenities,
-    featured: false,
-  },
-  {
-    name: "Quarto Individual",
-    img: roomSingle,
-    capacity: "1 pessoa",
-    price: "5.500 MT",
-    shortDesc: "Pensado para quem viaja sozinho, com secretária e iluminação natural.",
-    desc: "Pensado para quem viaja sozinho, com secretária de trabalho e iluminação natural.",
-    amenities: includedAmenities,
-    featured: false,
-  },
-  {
-    name: "Quarto Familiar",
-    img: roomFamily,
-    capacity: "4 pessoas",
-    price: "10.000 MT",
-    shortDesc: "Amplo e versátil, ideal para famílias que procuram conforto.",
-    desc: "Amplo e versátil, ideal para famílias que procuram conforto e espaço para todos.",
-    amenities: includedAmenities,
-    featured: false,
-  },
 ];
 
 export const Route = createFileRoute("/quartos")({
@@ -110,7 +66,7 @@ export const Route = createFileRoute("/quartos")({
       { property: "og:title", content: "Quartos da Villa das Palmeiras" },
       { property: "og:description", content: "Suítes confortáveis num refúgio entre palmeiras." },
       { property: "og:url", content: "/quartos" },
-      { property: "og:image", content: roomSuite },
+      { property: "og:image", content: roomCasaVerde },
     ],
     links: [{ rel: "canonical", href: "/quartos" }],
   }),
@@ -124,7 +80,7 @@ function Quartos() {
         kicker="Hospedagem"
         title="Quartos & Suítes"
         subtitle="Espaços luminosos e silenciosos, com tudo o que precisa para descansar verdadeiramente."
-        image={roomSuite}
+        image={roomCasaVerde}
       />
 
       <section className="py-24 sm:py-32 bg-[color:var(--cream)]">
