@@ -8,7 +8,7 @@ import miniZooImg from "../assets/mini-zoo.jpg";
 
 const animals = [
   {
-    icon: Horse,
+    icon: Heart,
     title: "Cavalos",
     description:
       "O nosso pequeno cavalo é uma das atrações preferidas dos hóspedes mais novos. Manso e habituado à presença de crianças, oferece momentos de proximidade com a natureza.",
@@ -20,7 +20,7 @@ const animals = [
       "Elegantes e curiosos, os ganços passeiam pelo jardim com toda a calma. São parte da paisagem sonora e visual do mini zoológico.",
   },
   {
-    icon: Duck,
+    icon: Bird,
     title: "Patos",
     description:
       "Os patos vivem junto ao pequeno lago, acompanhados pelos seus patinhos. Uma cena tranquila que encanta miúdos e graúdos.",
