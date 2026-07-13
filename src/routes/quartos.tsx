@@ -45,6 +45,24 @@ const rooms = [
     capacity: "4 pessoas",
     desc: "Amplo e versátil, ideal para famílias que procuram conforto e espaço para todos.",
   },
+  {
+    name: "Quarto Standard",
+    img: roomStandard,
+    capacity: "2 pessoas",
+    desc: "Uma escolha prática e acolhedora, com todas as comodidades essenciais para uma estadia confortável.",
+  },
+  {
+    name: "Quarto Executivo",
+    img: roomExecutivo,
+    capacity: "2 pessoas",
+    desc: "Quarto amplo com área de trabalho, ideal para quem viaja a negócios ou prefere um espaço requintado.",
+  },
+  {
+    name: "Casa Verde",
+    img: roomCasaVerde,
+    capacity: "2-3 pessoas",
+    desc: "Bungalow independente rodeado de jardim tropical, com varanda privada e atmosfera rústica e serena.",
+  },
 ];
 
 export const Route = createFileRoute("/quartos")({
