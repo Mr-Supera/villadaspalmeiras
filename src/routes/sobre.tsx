@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Heart, Eye, Compass, Leaf, Smile, UtensilsCrossed, Sparkles, BedDouble, ShieldCheck, MapPin } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
-import aboutImg from "../assets/about.jpg";
+import aboutImgAsset from "../assets/sobre-piscina.jpg.asset.json";
+const aboutImg = aboutImgAsset.url;
 import lobbyImg from "../assets/lobby.jpg";
 
 export const Route = createFileRoute("/sobre")({
