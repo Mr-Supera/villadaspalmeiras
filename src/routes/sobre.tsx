@@ -41,7 +41,7 @@ function Sobre() {
           <Reveal>
             <img
               src={lobbyImg}
-              alt="Lobby elegante da Villa das Palmeiras"
+              alt="Vista exterior da Villa das Palmeiras rodeada de jardim tropical"
               loading="lazy"
               width={1600}
               height={1067}
