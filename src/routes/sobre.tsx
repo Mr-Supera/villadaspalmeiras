@@ -4,7 +4,8 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import aboutImgAsset from "../assets/sobre-piscina.jpg.asset.json";
 const aboutImg = aboutImgAsset.url;
-import lobbyImg from "../assets/lobby.jpg";
+import lobbyImgAsset from "../assets/sobre-edificio.jpg.asset.json";
+const lobbyImg = lobbyImgAsset.url;
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
