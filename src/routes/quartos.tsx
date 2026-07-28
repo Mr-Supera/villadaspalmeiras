@@ -101,14 +101,7 @@ function Quartos() {
                 <Reveal>
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl shadow-luxe aspect-[4/3]">
-                      <img
-                        src={r.img}
-                        alt={r.name}
-                        loading="lazy"
-                        width={1600}
-                        height={1200}
-                        className="size-full object-cover transition-transform duration-[1200ms] hover:scale-105"
-                      />
+                      <ImageSlideshow images={r.images} intervalMs={2000} className="size-full" />
                     </div>
                     <div className="hidden sm:block absolute -bottom-6 -right-6 bg-[color:var(--gold)] text-white px-6 py-4 rounded-xl shadow-gold">
                       <div className="text-xs uppercase tracking-widest opacity-90">Desde</div>
