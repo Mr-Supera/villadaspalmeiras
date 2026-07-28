@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind } from "lucide-react";
+import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind, DoorOpen } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { ImageSlideshow } from "../components/ImageSlideshow";
@@ -23,6 +23,7 @@ const includedAmenities = [
   { icon: Bath, label: "Casa de banho privada" },
   { icon: Tv, label: "TV" },
   { icon: Wind, label: "Ar condicionado" },
+  { icon: DoorOpen, label: "Varanda privada" },
   { icon: Users, label: "Serviço de quarto" },
 ];
 
