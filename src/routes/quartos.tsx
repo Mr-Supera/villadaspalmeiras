@@ -23,6 +23,7 @@ const includedAmenities = [
   { icon: Bath, label: "Casa de banho privada" },
   { icon: Tv, label: "TV" },
   { icon: Wind, label: "Ar condicionado" },
+  { icon: DoorOpen, label: "Varanda privada" },
   { icon: Users, label: "Serviço de quarto" },
 ];
 
