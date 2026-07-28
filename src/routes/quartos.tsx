@@ -10,6 +10,10 @@ import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
 import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
 import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
 import qStandardVarandaPrivada from "../assets/quarto-standard-varanda-privada.jpg.asset.json";
+import qExec2 from "../assets/quarto-executivo-2.jpg.asset.json";
+import qExec4 from "../assets/quarto-executivo-4.jpg.asset.json";
+import qExec5 from "../assets/quarto-executivo-5.jpg.asset.json";
+import qExecCasaBanho from "../assets/quarto-executivo-casa-banho.jpg.asset.json";
 
 const includedAmenities = [
   { icon: Waves, label: "Piscina" },
@@ -38,7 +42,12 @@ const rooms = [
   },
   {
     name: "Quarto Executivo",
-    images: [{ src: roomExecutivo, alt: "Quarto Executivo" }],
+    images: [
+      { src: qExec5.url, alt: "Quarto Executivo — cama king size" },
+      { src: qExec2.url, alt: "Quarto Executivo — vista para a varanda" },
+      { src: qExecCasaBanho.url, alt: "Quarto Executivo — vista da casa de banho" },
+      { src: qExec4.url, alt: "Quarto Executivo — área de estar" },
+    ],
     capacity: "2 pessoas",
     price: "7.500 MT",
     tagline: "Espaço amplo e requintado",
@@ -101,7 +110,7 @@ function Quartos() {
                 <Reveal>
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl shadow-luxe aspect-[4/3]">
-                      <ImageSlideshow images={r.images} intervalMs={2000} className="size-full" />
+                      <ImageSlideshow images={r.images} intervalMs={3000} className="size-full" />
                     </div>
                     <div className="hidden sm:block absolute -bottom-6 -right-6 bg-[color:var(--gold)] text-white px-6 py-4 rounded-xl shadow-gold">
                       <div className="text-xs uppercase tracking-widest opacity-90">Desde</div>
