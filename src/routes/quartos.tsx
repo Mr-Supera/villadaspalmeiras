@@ -2,10 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
+import { ImageSlideshow } from "../components/ImageSlideshow";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import roomStandard from "../assets/room-standard.jpg";
 import roomExecutivo from "../assets/room-executivo.jpg";
+import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
+import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
+import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
+import qStandardVarandaPrivada from "../assets/quarto-standard-varanda-privada.jpg.asset.json";
 
 const includedAmenities = [
   { icon: Waves, label: "Piscina" },
@@ -21,7 +25,12 @@ const includedAmenities = [
 const rooms = [
   {
     name: "Quarto Standard",
-    img: roomStandard,
+    images: [
+      { src: qStandard1.url, alt: "Quarto Standard — vista geral" },
+      { src: qStandard2.url, alt: "Quarto Standard — cama de casal" },
+      { src: qStandardVarandaFrontal.url, alt: "Quarto Standard — varanda frontal" },
+      { src: qStandardVarandaPrivada.url, alt: "Quarto Standard — varanda privada" },
+    ],
     capacity: "2 pessoas",
     price: "6.500 MT",
     tagline: "Conforto essencial",
@@ -29,7 +38,7 @@ const rooms = [
   },
   {
     name: "Quarto Executivo",
-    img: roomExecutivo,
+    images: [{ src: roomExecutivo, alt: "Quarto Executivo" }],
     capacity: "2 pessoas",
     price: "7.500 MT",
     tagline: "Espaço amplo e requintado",
@@ -92,14 +101,7 @@ function Quartos() {
                 <Reveal>
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl shadow-luxe aspect-[4/3]">
-                      <img
-                        src={r.img}
-                        alt={r.name}
-                        loading="lazy"
-                        width={1600}
-                        height={1200}
-                        className="size-full object-cover transition-transform duration-[1200ms] hover:scale-105"
-                      />
+                      <ImageSlideshow images={r.images} intervalMs={2000} className="size-full" />
                     </div>
                     <div className="hidden sm:block absolute -bottom-6 -right-6 bg-[color:var(--gold)] text-white px-6 py-4 rounded-xl shadow-gold">
                       <div className="text-xs uppercase tracking-widest opacity-90">Desde</div>
