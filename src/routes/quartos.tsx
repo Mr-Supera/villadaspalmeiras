@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind } from "lucide-react";
+import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind, DoorOpen } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { ImageSlideshow } from "../components/ImageSlideshow";
