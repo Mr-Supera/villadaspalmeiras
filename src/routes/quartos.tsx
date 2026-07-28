@@ -5,7 +5,7 @@ import { Reveal } from "../components/Reveal";
 import { ImageSlideshow } from "../components/ImageSlideshow";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import roomExecutivo from "../assets/room-executivo.jpg";
+import roomExecutivo from "../assets/quarto-executivo-9.jpg.asset.json";
 import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
 import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
 import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
@@ -67,7 +67,7 @@ export const Route = createFileRoute("/quartos")({
       { property: "og:title", content: "Quartos da Villa das Palmeiras" },
       { property: "og:description", content: "Duas opções de acomodação elegantes num refúgio entre palmeiras." },
       { property: "og:url", content: "/quartos" },
-      { property: "og:image", content: roomExecutivo },
+      { property: "og:image", content: roomExecutivo.url },
     ],
     links: [{ rel: "canonical", href: "/quartos" }],
   }),
@@ -81,7 +81,7 @@ function Quartos() {
         kicker="Hospedagem"
         title="Quartos & Suítes"
         subtitle="Espaços luminosos e silenciosos, com tudo o que precisa para descansar verdadeiramente."
-        image={roomExecutivo}
+        image={roomExecutivo.url}
       />
 
       <section className="py-20 sm:py-28 bg-[color:var(--cream)]">
