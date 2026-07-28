@@ -9,7 +9,7 @@ import villaPromoAsset from "../assets/villa-promo.webm.asset.json";
 import heroImg from "../assets/hero.jpg";
 import roomSuiteAsset from "../assets/villa-room-real.png.asset.json";
 const roomSuite = roomSuiteAsset.url;
-import restaurantAsset from "../assets/restaurant-hero.jpg.asset.json";
+import restaurantAsset from "../assets/villa-das-palmeiras-pratos.png.asset.json";
 const restaurantImg = restaurantAsset.url;
 import eventWedding from "../assets/event-wedding.jpg";
 import eventVideoAsset from "../assets/event-video.mp4.asset.json";
@@ -283,7 +283,7 @@ function Home() {
       <section className="relative py-24 sm:py-32 text-white overflow-hidden">
         <img
           src={restaurantImg}
-          alt="Interior do restaurante da Villa das Palmeiras"
+          alt="Seleção de pratos do restaurante da Villa das Palmeiras"
           loading="lazy"
           width={1600}
           height={1067}
