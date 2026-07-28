@@ -283,7 +283,7 @@ function Home() {
       <section className="relative py-24 sm:py-32 text-white overflow-hidden">
         <img
           src={restaurantImg}
-          alt="Interior do restaurante da Villa das Palmeiras"
+          alt="Seleção de pratos do restaurante da Villa das Palmeiras"
           loading="lazy"
           width={1600}
           height={1067}
