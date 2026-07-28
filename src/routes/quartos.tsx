@@ -42,7 +42,12 @@ const rooms = [
   },
   {
     name: "Quarto Executivo",
-    images: [{ src: roomExecutivo, alt: "Quarto Executivo" }],
+    images: [
+      { src: qExec5.url, alt: "Quarto Executivo — cama king size" },
+      { src: qExec2.url, alt: "Quarto Executivo — vista para a varanda" },
+      { src: qExecCasaBanho.url, alt: "Quarto Executivo — vista da casa de banho" },
+      { src: qExec4.url, alt: "Quarto Executivo — área de estar" },
+    ],
     capacity: "2 pessoas",
     price: "7.500 MT",
     tagline: "Espaço amplo e requintado",
