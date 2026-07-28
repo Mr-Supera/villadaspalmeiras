@@ -13,8 +13,6 @@ import restaurantAsset from "../assets/restaurant-hero.jpg.asset.json";
 const restaurantImg = restaurantAsset.url;
 import eventWedding from "../assets/event-wedding.jpg";
 import eventVideoAsset from "../assets/event-video.mp4.asset.json";
-import poolAsset from "../assets/villa-pool-garden.jpg.asset.json";
-const poolImg = poolAsset.url;
 import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
 const gardenImg = gardenAsset.url;
 
