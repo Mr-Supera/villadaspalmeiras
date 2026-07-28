@@ -12,7 +12,7 @@ const roomSuite = roomSuiteAsset.url;
 import restaurantAsset from "../assets/villa-das-palmeiras-pratos.png.asset.json";
 const restaurantImg = restaurantAsset.url;
 import eventWedding from "../assets/event-wedding.jpg";
-import eventVideoAsset from "../assets/event-video.mp4.asset.json";
+import eventVideoAsset from "../assets/villa-wedding-promo.webm.asset.json";
 import poolAsset from "../assets/villa-pool-garden.jpg.asset.json";
 const poolImg = poolAsset.url;
 import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
