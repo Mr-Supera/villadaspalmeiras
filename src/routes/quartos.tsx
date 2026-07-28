@@ -5,7 +5,7 @@ import { Reveal } from "../components/Reveal";
 import { ImageSlideshow } from "../components/ImageSlideshow";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import roomExecutivo from "../assets/room-executivo.jpg";
+import roomExecutivo from "../assets/quarto-executivo-9.jpg.asset.json";
 import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
 import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
 import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
