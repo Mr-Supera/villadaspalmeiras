@@ -13,8 +13,6 @@ import restaurantAsset from "../assets/restaurant-hero.jpg.asset.json";
 const restaurantImg = restaurantAsset.url;
 import eventWedding from "../assets/event-wedding.jpg";
 import eventVideoAsset from "../assets/event-video.mp4.asset.json";
-import poolAsset from "../assets/villa-pool-garden.jpg.asset.json";
-const poolImg = poolAsset.url;
 import gardenAsset from "../assets/villa-garden-pool.jpg.asset.json";
 const gardenImg = gardenAsset.url;
 
@@ -246,26 +244,6 @@ function Home() {
               </div>
             </Reveal>
 
-            <Reveal delay={120}>
-              <div className="relative overflow-hidden rounded-2xl aspect-[4/5] group">
-                <img
-                  src={poolImg}
-                  alt="Piscina rodeada de palmeiras"
-                  loading="lazy"
-                  width={1600}
-                  height={1067}
-                  className="size-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-8 text-white">
-                  <span className="kicker !text-[color:var(--gold-soft)]">Lazer</span>
-                  <h3 className="heading-serif mt-2 text-3xl">Piscina & Jardim</h3>
-                  <p className="mt-2 text-sm text-white/80 max-w-md">
-                    Um oásis para começar ou terminar o dia, à sombra das palmeiras.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
           </div>
 
           <Reveal>
