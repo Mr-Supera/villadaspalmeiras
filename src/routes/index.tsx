@@ -261,7 +261,7 @@ function Home() {
                   <span className="kicker !text-[color:var(--gold-soft)]">Lazer</span>
                   <h3 className="heading-serif mt-2 text-3xl">Piscina & Jardim</h3>
                   <p className="mt-2 text-sm text-white/80 max-w-md">
-                    Um oásis para começar ou terminar o dia, à sombra das palmeiras.
+                    Um oásis tropical para começar ou terminar o dia com tranquilidade.
                   </p>
                 </div>
               </div>
