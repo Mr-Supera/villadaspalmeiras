@@ -10,6 +10,10 @@ import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
 import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
 import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
 import qStandardVarandaPrivada from "../assets/quarto-standard-varanda-privada.jpg.asset.json";
+import qExec2 from "../assets/quarto-executivo-2.jpg.asset.json";
+import qExec4 from "../assets/quarto-executivo-4.jpg.asset.json";
+import qExec5 from "../assets/quarto-executivo-5.jpg.asset.json";
+import qExecCasaBanho from "../assets/quarto-executivo-casa-banho.jpg.asset.json";
 
 const includedAmenities = [
   { icon: Waves, label: "Piscina" },
