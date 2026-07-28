@@ -2,10 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Users, Wifi, Bath, Coffee, MessageCircle, Waves, Car, Tv, Wind } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
+import { ImageSlideshow } from "../components/ImageSlideshow";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import roomStandard from "../assets/room-standard.jpg";
 import roomExecutivo from "../assets/room-executivo.jpg";
+import qStandard1 from "../assets/quarto-standard-1.jpg.asset.json";
+import qStandard2 from "../assets/quarto-standard-2.jpg.asset.json";
+import qStandardVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
+import qStandardVarandaPrivada from "../assets/quarto-standard-varanda-privada.jpg.asset.json";
 
 const includedAmenities = [
   { icon: Waves, label: "Piscina" },
@@ -21,7 +25,12 @@ const includedAmenities = [
 const rooms = [
   {
     name: "Quarto Standard",
-    img: roomStandard,
+    images: [
+      { src: qStandard1.url, alt: "Quarto Standard — vista geral" },
+      { src: qStandard2.url, alt: "Quarto Standard — cama de casal" },
+      { src: qStandardVarandaFrontal.url, alt: "Quarto Standard — varanda frontal" },
+      { src: qStandardVarandaPrivada.url, alt: "Quarto Standard — varanda privada" },
+    ],
     capacity: "2 pessoas",
     price: "6.500 MT",
     tagline: "Conforto essencial",
@@ -29,7 +38,7 @@ const rooms = [
   },
   {
     name: "Quarto Executivo",
-    img: roomExecutivo,
+    images: [{ src: roomExecutivo, alt: "Quarto Executivo" }],
     capacity: "2 pessoas",
     price: "7.500 MT",
     tagline: "Espaço amplo e requintado",
