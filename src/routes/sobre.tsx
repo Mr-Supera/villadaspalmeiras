@@ -4,7 +4,8 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import aboutImgAsset from "../assets/sobre-piscina.jpg.asset.json";
 const aboutImg = aboutImgAsset.url;
-import lobbyImg from "../assets/lobby.jpg";
+import lobbyImgAsset from "../assets/sobre-edificio.jpg.asset.json";
+const lobbyImg = lobbyImgAsset.url;
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -40,7 +41,7 @@ function Sobre() {
           <Reveal>
             <img
               src={lobbyImg}
-              alt="Lobby elegante da Villa das Palmeiras"
+              alt="Vista exterior da Villa das Palmeiras rodeada de jardim tropical"
               loading="lazy"
               width={1600}
               height={1067}
