@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-export function ImageSlideshow({ images, intervalMs = 2000, className = "" }: Props) {
+export function ImageSlideshow({ images, intervalMs = 3000, className = "" }: Props) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
