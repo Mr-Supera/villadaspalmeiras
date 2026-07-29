@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight } from "lucide-react";
+import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight, Presentation } from "lucide-react";
 
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
@@ -113,7 +113,7 @@ function Home() {
             />
           </Reveal>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: BedDouble,
@@ -130,8 +130,14 @@ function Home() {
               {
                 icon: Sparkles,
                 title: "Espaço para eventos",
-                text: "Casamentos, conferências, aniversários e jantares — tornamos cada ocasião especial.",
+                text: "Casamentos, aniversários e jantares — tornamos cada ocasião especial.",
                 to: "/eventos",
+              },
+              {
+                icon: Presentation,
+                title: "Sala de Conferências",
+                text: "Espaço privado, equipado e com catering para reuniões, formações e workshops.",
+                to: "/conferencias",
               },
             ].map((f, i) => (
               <Reveal key={f.title} delay={i * 120}>
