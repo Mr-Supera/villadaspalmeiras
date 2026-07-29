@@ -6,7 +6,9 @@ import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
 import restaurantImg from "../assets/restaurant.jpg";
 import restaurantOutdoor from "../assets/restaurant-outdoor.jpg";
-import foodImg from "../assets/food.jpg";
+import restaurantDishesAsset from "../assets/villa-das-palmeiras-pratos-2.png.asset.json";
+const restaurantDishes = restaurantDishesAsset.url;
+
 
 export const Route = createFileRoute("/restaurante")({
   head: () => ({
@@ -54,8 +56,8 @@ function Restaurante() {
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
             <img
-              src={foodImg}
-              alt="Prato gourmet de inspiração moçambicana"
+              src={restaurantDishes}
+              alt="Seleção de pratos moçambicanos e internacionais do restaurante da Villa das Palmeiras"
               loading="lazy"
               width={1600}
               height={1067}
