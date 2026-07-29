@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight } from "lucide-react";
+import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight, Presentation } from "lucide-react";
 
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
