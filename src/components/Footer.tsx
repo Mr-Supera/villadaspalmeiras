@@ -52,6 +52,7 @@ export function Footer() {
               ["/restaurante", "Restaurante"],
               ["/eventos", "Eventos"],
               ["/minizoo", "Mini Zoológico"],
+              ["/conferencias", "Conferências"],
               ["/galeria", "Galeria"],
               ["/contactos", "Contactos"],
             ].map(([to, label]) => (
