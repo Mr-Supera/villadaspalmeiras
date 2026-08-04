@@ -1,7 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { whatsappLink, site } from "../lib/site";
+import { cn } from "../lib/utils";
 import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 const nav = [
@@ -19,6 +20,8 @@ const nav = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -58,19 +61,22 @@ export function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-sm font-medium transition-colors relative py-1 text-white hover:text-[color:var(--gold)]"
-              activeProps={{
-                className: "text-[color:var(--gold)]",
-              }}
-              activeOptions={{ exact: item.to === "/" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = pathname === item.to;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={cn(
+                  "text-sm font-medium transition-colors relative py-1",
+                  active ? "text-gold" : "text-white hover:text-gold"
+                )}
+                activeOptions={{ exact: true }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
@@ -110,21 +116,28 @@ export function Header() {
           className="container-luxe flex flex-col gap-1 pt-8"
           aria-label="Navegação móvel"
         >
-          {nav.map((item, i) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              className="heading-serif text-2xl py-3 border-b border-border text-[color:var(--forest)] hover:text-[color:var(--gold)] transition-colors"
-              style={{
-                animation: open
-                  ? `reveal-up 0.5s ${i * 60}ms cubic-bezier(0.22,1,0.36,1) both`
-                  : undefined,
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item, i) => {
+            const active = pathname === item.to;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "heading-serif text-2xl py-3 border-b border-border transition-colors",
+                  active ? "text-gold" : "text-forest hover:text-gold"
+                )}
+                activeOptions={{ exact: true }}
+                style={{
+                  animation: open
+                    ? `reveal-up 0.5s ${i * 60}ms cubic-bezier(0.22,1,0.36,1) both`
+                    : undefined,
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <a
             href={whatsappLink()}
             target="_blank"
