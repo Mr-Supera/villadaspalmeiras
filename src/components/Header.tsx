@@ -1,7 +1,8 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { whatsappLink, site } from "../lib/site";
+import { cn } from "../lib/utils";
 import logoImg from "@/assets/villa-das-palmeiras-logo.png";
 
 const nav = [
