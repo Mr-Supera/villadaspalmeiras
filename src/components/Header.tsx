@@ -20,6 +20,8 @@ const nav = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
