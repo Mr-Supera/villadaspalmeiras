@@ -116,21 +116,28 @@ export function Header() {
           className="container-luxe flex flex-col gap-1 pt-8"
           aria-label="Navegação móvel"
         >
-          {nav.map((item, i) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              className="heading-serif text-2xl py-3 border-b border-border text-[color:var(--forest)] hover:text-[color:var(--gold)] transition-colors"
-              style={{
-                animation: open
-                  ? `reveal-up 0.5s ${i * 60}ms cubic-bezier(0.22,1,0.36,1) both`
-                  : undefined,
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item, i) => {
+            const active = pathname === item.to;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "heading-serif text-2xl py-3 border-b border-border transition-colors",
+                  active ? "text-gold" : "text-forest hover:text-gold"
+                )}
+                activeOptions={{ exact: true }}
+                style={{
+                  animation: open
+                    ? `reveal-up 0.5s ${i * 60}ms cubic-bezier(0.22,1,0.36,1) both`
+                    : undefined,
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <a
             href={whatsappLink()}
             target="_blank"
