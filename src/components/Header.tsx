@@ -61,19 +61,22 @@ export function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-sm font-medium transition-colors relative py-1 text-white hover:text-[color:var(--gold)]"
-              activeProps={{
-                className: "text-[color:var(--gold)]",
-              }}
-              activeOptions={{ exact: item.to === "/" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = pathname === item.to;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={cn(
+                  "text-sm font-medium transition-colors relative py-1",
+                  active ? "text-gold" : "text-white hover:text-gold"
+                )}
+                activeOptions={{ exact: true }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
