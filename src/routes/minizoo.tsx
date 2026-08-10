@@ -163,6 +163,31 @@ function Minizoo() {
       </section>
 
       <section className="py-24 sm:py-32">
+        <div className="container-luxe">
+          <Reveal>
+            <SectionTitle
+              kicker="Galeria"
+              title="Momentos no nosso mini zoológico"
+              description="Um olhar pelo dia a dia dos nossos animais, entre a sombra das árvores, o lago e os recintos cuidados todos os dias pela nossa equipa."
+            />
+          </Reveal>
+          <div className="mt-16 grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-4">
+            {gallery.map((g, i) => (
+              <Reveal key={g.url} delay={i * 80} className={g.span}>
+                <img
+                  src={g.url}
+                  alt={g.alt}
+                  loading="lazy"
+                  className="h-full w-full rounded-2xl object-cover shadow-luxe transition-transform duration-500 hover:scale-[1.02]"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="py-24 sm:py-32">
         <div className="container-luxe text-center">
           <Reveal>
             <span className="kicker">Visite-nos</span>
