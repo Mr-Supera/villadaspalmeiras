@@ -4,7 +4,8 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
-import miniZooImg from "../assets/mini-zoo.jpg";
+import miniZooImgAsset from "../assets/animais-villa-das-palmeiras.png.asset.json";
+const miniZooImg = miniZooImgAsset.url;
 
 const animals = [
   {
