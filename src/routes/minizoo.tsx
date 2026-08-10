@@ -1,32 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bird, Heart, Leaf, MessageCircle } from "lucide-react";
+import { Bird, Heart, Leaf, MessageCircle, Rabbit, Egg, Trees } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
 import miniZooImgAsset from "../assets/animais-villa-das-palmeiras.png.asset.json";
+import poneisAsset from "../assets/zoo-img_0760.jpg.asset.json";
+import periquitoAsset from "../assets/zoo-img_0826.png.asset.json";
+import sagui1Asset from "../assets/zoo-img_0828.webp.asset.json";
+import arasAsset from "../assets/zoo-img_0831.webp.asset.json";
+import avestruzAsset from "../assets/zoo-img_0832.webp.asset.json";
+import cabritosAsset from "../assets/zoo-img_0861.jpg.asset.json";
+import lagoAsset from "../assets/zoo-img_0864.jpg.asset.json";
 const miniZooImg = miniZooImgAsset.url;
+
+const gallery = [
+  { url: poneisAsset.url, alt: "Póneis a pastar no jardim da Villa das Palmeiras", span: "sm:col-span-2 sm:row-span-2" },
+  { url: sagui1Asset.url, alt: "Sagui num poleiro de madeira no mini zoológico", span: "" },
+  { url: periquitoAsset.url, alt: "Periquito amarelo junto aos ninhos de madeira", span: "" },
+  { url: arasAsset.url, alt: "Araras azuis e amarelas no viveiro", span: "sm:row-span-2" },
+  { url: cabritosAsset.url, alt: "Cabritos ao sol no recinto da quinta", span: "sm:col-span-2" },
+  { url: avestruzAsset.url, alt: "Avestruz a caminhar no recinto", span: "" },
+  { url: lagoAsset.url, alt: "Patos e gansos junto ao lago do mini zoológico", span: "sm:col-span-2" },
+];
 
 const animals = [
   {
     icon: Heart,
-    title: "Cavalos",
+    title: "Póneis",
     description:
-      "O nosso pequeno cavalo é uma das atrações preferidas dos hóspedes mais novos. Manso e habituado à presença de crianças, oferece momentos de proximidade com a natureza.",
+      "Os nossos póneis são uma das atrações preferidas dos hóspedes mais novos. Mansos e habituados à presença de crianças, oferecem momentos de proximidade com a natureza.",
   },
   {
     icon: Bird,
-    title: "Ganços",
+    title: "Araras e periquitos",
     description:
-      "Elegantes e curiosos, os ganços passeiam pelo jardim com toda a calma. São parte da paisagem sonora e visual do mini zoológico.",
+      "Um viveiro cheio de cor e som: araras azuis e amarelas e periquitos que acompanham as manhãs com o seu chilrear.",
+  },
+  {
+    icon: Rabbit,
+    title: "Saguis",
+    description:
+      "Curiosos e ágeis, os saguis saltam entre os troncos do seu recinto sombreado. Observá-los é um pequeno espetáculo.",
   },
   {
     icon: Bird,
-    title: "Patos",
+    title: "Avestruzes",
     description:
-      "Os patos vivem junto ao pequeno lago, acompanhados pelos seus patinhos. Uma cena tranquila que encanta miúdos e graúdos.",
+      "Imponentes e serenas, as avestruzes percorrem o seu espaço amplo — uma presença sempre surpreendente para quem visita.",
+  },
+  {
+    icon: Trees,
+    title: "Cabritos",
+    description:
+      "O rebanho de cabritos vive num recinto amplo e cuidado, entre a sombra das árvores e o calor do fim de tarde.",
+  },
+  {
+    icon: Egg,
+    title: "Patos e gansos",
+    description:
+      "Junto ao pequeno lago, patos e gansos convivem em harmonia. Uma cena tranquila que encanta miúdos e graúdos.",
   },
 ];
+
 
 export const Route = createFileRoute("/minizoo")({
   head: () => ({
@@ -35,13 +71,14 @@ export const Route = createFileRoute("/minizoo")({
       {
         name: "description",
         content:
-          "Visite o mini zoológico da Villa das Palmeiras: cavalos, ganços e patos num ambiente seguro e tranquilo em Moçambique. Ideal para famílias.",
+          "Visite o mini zoológico da Villa das Palmeiras: póneis, araras, saguis, avestruzes, cabritos, patos e gansos num ambiente seguro em Moçambique.",
       },
       { property: "og:title", content: "Mini Zoológico na Villa das Palmeiras" },
       {
         property: "og:description",
-        content: "Cavalos, ganços e patos num canto verde e sereno do nosso refúgio em Moçambique.",
+        content: "Póneis, araras, saguis, avestruzes e aves aquáticas num canto verde e sereno do nosso refúgio em Moçambique.",
       },
+
       { property: "og:url", content: "/minizoo" },
       { property: "og:image", content: miniZooImg },
     ],
@@ -64,13 +101,14 @@ function Minizoo() {
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
             <img
-              src={miniZooImg}
-              alt="Cavalo branco, ganços e patos no jardim tropical da Villa das Palmeiras"
+              src={poneisAsset.url}
+              alt="Póneis a pastar no jardim tropical da Villa das Palmeiras"
               loading="lazy"
               width={1600}
               height={1067}
               className="rounded-2xl shadow-luxe object-cover w-full aspect-[4/3]"
             />
+
           </Reveal>
           <Reveal delay={150}>
             <div>
@@ -123,6 +161,31 @@ function Minizoo() {
           </div>
         </div>
       </section>
+
+      <section className="py-24 sm:py-32">
+        <div className="container-luxe">
+          <Reveal>
+            <SectionTitle
+              kicker="Galeria"
+              title="Momentos no nosso mini zoológico"
+              description="Um olhar pelo dia a dia dos nossos animais, entre a sombra das árvores, o lago e os recintos cuidados todos os dias pela nossa equipa."
+            />
+          </Reveal>
+          <div className="mt-16 grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-4">
+            {gallery.map((g, i) => (
+              <Reveal key={g.url} delay={i * 80} className={g.span}>
+                <img
+                  src={g.url}
+                  alt={g.alt}
+                  loading="lazy"
+                  className="h-full w-full rounded-2xl object-cover shadow-luxe transition-transform duration-500 hover:scale-[1.02]"
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="py-24 sm:py-32">
         <div className="container-luxe text-center">
