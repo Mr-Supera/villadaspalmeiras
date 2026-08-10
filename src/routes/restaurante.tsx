@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Utensils, Wine, Trees, Users, MessageCircle } from "lucide-react";
+import { Utensils, Wine, Trees, Users, MessageCircle, Star, Award, Sparkles, Leaf, HeartHandshake } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
@@ -113,27 +113,35 @@ function Restaurante() {
       </section>
 
       <section className="py-24 sm:py-32 bg-[color:var(--cream)]">
-        <div className="container-luxe grid gap-6 md:grid-cols-2">
+        <div className="container-luxe">
           <Reveal>
-            <img
-              src={restaurantImg}
-              alt="Sala interior do restaurante com toalhas brancas e velas"
-              loading="lazy"
-              width={1600}
-              height={1067}
-              className="rounded-2xl object-cover w-full aspect-[4/3]"
+            <SectionTitle
+              align="center"
+              kicker="Porque escolher-nos"
+              title="Compromisso com a excelência"
+              description="Cada detalhe é pensado para oferecer uma experiência gastronómica inesquecível, do primeiro ao último momento."
             />
           </Reveal>
-          <Reveal delay={150}>
-            <img
-              src={restaurantOutdoor}
-              alt="Esplanada exterior do restaurante com vista para o mar"
-              loading="lazy"
-              width={1600}
-              height={1067}
-              className="rounded-2xl object-cover w-full aspect-[4/3]"
-            />
-          </Reveal>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: Star, title: "Serviço de excelência", description: "Atendimento atencioso e personalizado para cada hóspede." },
+              { icon: Award, title: "Chefe de cozinha nota 5", description: "Pratos elaborados por um chef experiente e apaixonado pela gastronomia." },
+              { icon: Sparkles, title: "Limpeza impecável", description: "Ambientes cuidados e higienizados segundo os mais altos padrões." },
+              { icon: Leaf, title: "Ingredientes frescos", description: "Produtos seleccionados e locais que valorizam o sabor autêntico." },
+              { icon: HeartHandshake, title: "Ambiente acolhedor", description: "Um espaço familiar e tranquilo, ideal para qualquer ocasião." },
+              { icon: Wine, title: "Carta de bebidas refinada", description: "Vinhos, cocktails e bebidas que harmonizam perfeitamente com a refeição." },
+            ].map((it) => (
+              <Reveal key={it.title} delay={100}>
+                <div className="h-full rounded-2xl bg-white p-8 shadow-subtle">
+                  <span className="grid size-12 place-items-center rounded-full bg-[color:var(--gold)]/10 text-[color:var(--gold)]">
+                    <it.icon className="size-5" />
+                  </span>
+                  <h3 className="mt-5 font-serif text-lg text-[color:var(--forest)]">{it.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[color:var(--gray)]">{it.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </>
