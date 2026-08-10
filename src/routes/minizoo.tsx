@@ -101,13 +101,14 @@ function Minizoo() {
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
             <img
-              src={miniZooImg}
-              alt="Cavalo branco, ganços e patos no jardim tropical da Villa das Palmeiras"
+              src={poneisAsset.url}
+              alt="Póneis a pastar no jardim tropical da Villa das Palmeiras"
               loading="lazy"
               width={1600}
               height={1067}
               className="rounded-2xl shadow-luxe object-cover w-full aspect-[4/3]"
             />
+
           </Reveal>
           <Reveal delay={150}>
             <div>
