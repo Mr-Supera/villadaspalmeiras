@@ -6,7 +6,7 @@ import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
 import restaurantImgAsset from "../assets/villa-das-palmeiras-pratos-3.png.asset.json";
 const restaurantImg = restaurantImgAsset.url;
-import restaurantOutdoor from "../assets/restaurant-outdoor.jpg";
+
 import restaurantDishesAsset from "../assets/villa-das-palmeiras-pratos-2.png.asset.json";
 const restaurantDishes = restaurantDishesAsset.url;
 
