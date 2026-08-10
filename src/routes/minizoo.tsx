@@ -1,32 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bird, Heart, Leaf, MessageCircle } from "lucide-react";
+import { Bird, Heart, Leaf, MessageCircle, Rabbit, Egg, Trees } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
 import miniZooImgAsset from "../assets/animais-villa-das-palmeiras.png.asset.json";
+import poneisAsset from "../assets/zoo-img_0760.jpg.asset.json";
+import periquitoAsset from "../assets/zoo-img_0826.png.asset.json";
+import sagui1Asset from "../assets/zoo-img_0828.webp.asset.json";
+import arasAsset from "../assets/zoo-img_0831.webp.asset.json";
+import avestruzAsset from "../assets/zoo-img_0832.webp.asset.json";
+import cabritosAsset from "../assets/zoo-img_0861.jpg.asset.json";
+import lagoAsset from "../assets/zoo-img_0864.jpg.asset.json";
 const miniZooImg = miniZooImgAsset.url;
+
+const gallery = [
+  { url: poneisAsset.url, alt: "Póneis a pastar no jardim da Villa das Palmeiras", span: "sm:col-span-2 sm:row-span-2" },
+  { url: sagui1Asset.url, alt: "Sagui num poleiro de madeira no mini zoológico", span: "" },
+  { url: periquitoAsset.url, alt: "Periquito amarelo junto aos ninhos de madeira", span: "" },
+  { url: arasAsset.url, alt: "Araras azuis e amarelas no viveiro", span: "sm:row-span-2" },
+  { url: cabritosAsset.url, alt: "Cabritos ao sol no recinto da quinta", span: "sm:col-span-2" },
+  { url: avestruzAsset.url, alt: "Avestruz a caminhar no recinto", span: "" },
+  { url: lagoAsset.url, alt: "Patos e gansos junto ao lago do mini zoológico", span: "sm:col-span-2" },
+];
 
 const animals = [
   {
     icon: Heart,
-    title: "Cavalos",
+    title: "Póneis",
     description:
-      "O nosso pequeno cavalo é uma das atrações preferidas dos hóspedes mais novos. Manso e habituado à presença de crianças, oferece momentos de proximidade com a natureza.",
+      "Os nossos póneis são uma das atrações preferidas dos hóspedes mais novos. Mansos e habituados à presença de crianças, oferecem momentos de proximidade com a natureza.",
   },
   {
     icon: Bird,
-    title: "Ganços",
+    title: "Araras e periquitos",
     description:
-      "Elegantes e curiosos, os ganços passeiam pelo jardim com toda a calma. São parte da paisagem sonora e visual do mini zoológico.",
+      "Um viveiro cheio de cor e som: araras azuis e amarelas e periquitos que acompanham as manhãs com o seu chilrear.",
+  },
+  {
+    icon: Rabbit,
+    title: "Saguis",
+    description:
+      "Curiosos e ágeis, os saguis saltam entre os troncos do seu recinto sombreado. Observá-los é um pequeno espetáculo.",
   },
   {
     icon: Bird,
-    title: "Patos",
+    title: "Avestruzes",
     description:
-      "Os patos vivem junto ao pequeno lago, acompanhados pelos seus patinhos. Uma cena tranquila que encanta miúdos e graúdos.",
+      "Imponentes e serenas, as avestruzes percorrem o seu espaço amplo — uma presença sempre surpreendente para quem visita.",
+  },
+  {
+    icon: Trees,
+    title: "Cabritos",
+    description:
+      "O rebanho de cabritos vive num recinto amplo e cuidado, entre a sombra das árvores e o calor do fim de tarde.",
+  },
+  {
+    icon: Egg,
+    title: "Patos e gansos",
+    description:
+      "Junto ao pequeno lago, patos e gansos convivem em harmonia. Uma cena tranquila que encanta miúdos e graúdos.",
   },
 ];
+
 
 export const Route = createFileRoute("/minizoo")({
   head: () => ({
