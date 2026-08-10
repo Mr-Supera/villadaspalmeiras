@@ -5,7 +5,8 @@ import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { Lightbox } from "../components/Lightbox";
 
-import heroImg from "../assets/hero.jpg";
+import galeriaHeroAsset from "../assets/galeria-hero.jpg.asset.json";
+const heroImg = galeriaHeroAsset.url;
 import roomSuite from "../assets/room-suite.jpg";
 import roomDouble from "../assets/room-double.jpg";
 import roomSingle from "../assets/room-single.jpg";
