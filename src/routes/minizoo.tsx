@@ -71,13 +71,14 @@ export const Route = createFileRoute("/minizoo")({
       {
         name: "description",
         content:
-          "Visite o mini zoológico da Villa das Palmeiras: cavalos, ganços e patos num ambiente seguro e tranquilo em Moçambique. Ideal para famílias.",
+          "Visite o mini zoológico da Villa das Palmeiras: póneis, araras, saguis, avestruzes, cabritos, patos e gansos num ambiente seguro em Moçambique.",
       },
       { property: "og:title", content: "Mini Zoológico na Villa das Palmeiras" },
       {
         property: "og:description",
-        content: "Cavalos, ganços e patos num canto verde e sereno do nosso refúgio em Moçambique.",
+        content: "Póneis, araras, saguis, avestruzes e aves aquáticas num canto verde e sereno do nosso refúgio em Moçambique.",
       },
+
       { property: "og:url", content: "/minizoo" },
       { property: "og:image", content: miniZooImg },
     ],
