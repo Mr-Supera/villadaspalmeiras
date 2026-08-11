@@ -10,6 +10,8 @@ export const site = {
   email: "reservas@villadaspalmeiras.co.mz",
   address: "Maputo, KaTembe - KhaElisa",
   // Coordenadas: Maputo, KaTembe - KhaElisa
+  mapLat: -26.072877588792778,
+  mapLng: 32.62131365767271,
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.7!2d32.62131365767271!3d-26.072877588792778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU4JzA5LjEiUyAzMsKwMzQnMjMuNSJF!5e0!3m2!1spt-PT!2spt!4v1700000000000",
   mapOpenUrl: "https://maps.app.goo.gl/BgPPDbZaP1WxAGVUA",
