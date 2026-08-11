@@ -204,9 +204,8 @@ function Contactos() {
 
 function getMapEmbedUrl() {
   const browserKey = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY;
-  const trackingId = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_TRACKING_ID;
   if (!browserKey) return site.mapEmbed;
-  return `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(browserKey)}&q=${encodeURIComponent(`${site.mapLat},${site.mapLng}`)}&language=pt-PT&zoom=16${trackingId ? `&channel=${encodeURIComponent(trackingId)}` : ""}`;
+  return `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(browserKey)}&q=${encodeURIComponent(`${site.mapLat},${site.mapLng}`)}&language=pt-PT&zoom=16`;
 }
 
 function Field({
