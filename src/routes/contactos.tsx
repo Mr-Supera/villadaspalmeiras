@@ -184,6 +184,17 @@ function Contactos() {
                 allowFullScreen
               />
             </div>
+            <div className="mt-6 text-center">
+              <a
+                href={site.mapOpenUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold inline-flex items-center gap-2"
+              >
+                <MapPin className="size-4" />
+                Abrir no Google Maps
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
