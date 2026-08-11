@@ -9,9 +9,10 @@ export const site = {
   phone: "+258 85 202 1633",
   email: "reservas@villadaspalmeiras.co.mz",
   address: "Maputo, KaTembe - KhaElisa",
-  // Coordenadas para mapa (Maputo, placeholder)
+  // Coordenadas: Maputo, KaTembe - KhaElisa
   mapEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.7!2d32.5732!3d-25.9692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU4JzA5LjEiUyAzMsKwMzQnMjMuNSJF!5e0!3m2!1spt-PT!2spt!4v1700000000000",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.7!2d32.62131365767271!3d-26.072877588792778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU4JzA5LjEiUyAzMsKwMzQnMjMuNSJF!5e0!3m2!1spt-PT!2spt!4v1700000000000",
+  mapOpenUrl: "https://www.google.com/maps/search/?api=1&query=-26.072877588792778,32.62131365767271",
   hours: [
     { day: "Recepção", value: "24 horas" },
     { day: "Restaurante (Meio de semana)", value: "11:00 – 19:00" },
