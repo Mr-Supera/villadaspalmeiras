@@ -172,18 +172,7 @@ function Contactos() {
       <section className="pb-24">
         <div className="container-luxe">
           <Reveal>
-            <div className="rounded-2xl overflow-hidden border border-border aspect-[16/9] bg-[color:var(--cream)]">
-              <iframe
-                title="Localização da Villa das Palmeiras"
-                src={getMapEmbedUrl()}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            </div>
+            <MapEmbed />
             <div className="mt-6 text-center">
               <a
                 href={site.mapOpenUrl}
@@ -202,10 +191,32 @@ function Contactos() {
   );
 }
 
-function getMapEmbedUrl() {
-  const browserKey = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY;
-  if (!browserKey) return site.mapEmbed;
-  return `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(browserKey)}&q=${encodeURIComponent(`${site.mapLat},${site.mapLng}`)}&language=pt-PT&zoom=16`;
+function MapEmbed() {
+  const [mapSrc, setMapSrc] = useState(site.mapEmbed);
+
+  useEffect(() => {
+    const browserKey = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY;
+    if (browserKey && window.location.hostname !== "localhost") {
+      setMapSrc(
+        `https://www.google.com/maps/embed/v1/place?key=${encodeURIComponent(browserKey)}&q=${encodeURIComponent(`${site.mapLat},${site.mapLng}`)}&language=pt-PT&zoom=16`
+      );
+    }
+  }, []);
+
+  return (
+    <div className="rounded-2xl overflow-hidden border border-border aspect-[16/9] bg-[color:var(--cream)]">
+      <iframe
+        title="Localização da Villa das Palmeiras"
+        src={mapSrc}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+      />
+    </div>
+  );
 }
 
 function Field({
