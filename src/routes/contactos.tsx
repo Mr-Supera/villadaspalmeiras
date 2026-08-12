@@ -6,7 +6,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { site, whatsappLink } from "../lib/site";
-import contactosExteriorImg from "../assets/contactos-exterior.jpg.asset.json";
+import contactosHeroImg from "../assets/contactos-hero.webp.asset.json";
 
 export const Route = createFileRoute("/contactos")({
   head: () => ({
@@ -71,7 +71,7 @@ function Contactos() {
         kicker="Fale connosco"
         title="Contactos"
         subtitle="Estamos disponíveis para esclarecer qualquer dúvida e ajudar a planear a sua estadia."
-        image={contactosExteriorImg.url}
+        image={contactosHeroImg.url}
       />
 
       <section className="py-24 sm:py-32">
