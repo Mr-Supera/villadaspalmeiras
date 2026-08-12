@@ -44,7 +44,7 @@ function Eventos() {
         kicker="Espaço para eventos"
         title="Celebrações memoráveis"
         subtitle="Do casamento dos seus sonhos à conferência empresarial — tornamos cada ocasião especial."
-        image={eventWedding}
+        image={eventosHeroAsset.url}
       />
 
       <section className="py-24 sm:py-32">
