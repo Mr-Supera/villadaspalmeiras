@@ -4,6 +4,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
+import eventosHeroAsset from "../assets/eventos-hero.webp.asset.json";
 import eventWedding from "../assets/event-wedding.jpg";
 import eventConference from "../assets/event-conference.jpg";
 import eventBirthday from "../assets/event-birthday.jpg";
@@ -29,7 +30,7 @@ export const Route = createFileRoute("/eventos")({
       { property: "og:title", content: "Eventos na Villa das Palmeiras" },
       { property: "og:description", content: "Espaços versáteis para celebrações inesquecíveis em Moçambique." },
       { property: "og:url", content: "/eventos" },
-      { property: "og:image", content: eventWedding },
+      { property: "og:image", content: eventosHeroAsset.url },
     ],
     links: [{ rel: "canonical", href: "/eventos" }],
   }),
@@ -43,7 +44,7 @@ function Eventos() {
         kicker="Espaço para eventos"
         title="Celebrações memoráveis"
         subtitle="Do casamento dos seus sonhos à conferência empresarial — tornamos cada ocasião especial."
-        image={eventWedding}
+        image={eventosHeroAsset.url}
       />
 
       <section className="py-24 sm:py-32">
