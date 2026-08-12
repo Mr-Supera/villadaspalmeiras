@@ -4,6 +4,7 @@ import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
 import { whatsappLink } from "../lib/site";
+import eventosHeroAsset from "../assets/eventos-hero.webp.asset.json";
 import eventWedding from "../assets/event-wedding.jpg";
 import eventConference from "../assets/event-conference.jpg";
 import eventBirthday from "../assets/event-birthday.jpg";
