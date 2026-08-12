@@ -30,7 +30,7 @@ export const Route = createFileRoute("/eventos")({
       { property: "og:title", content: "Eventos na Villa das Palmeiras" },
       { property: "og:description", content: "Espaços versáteis para celebrações inesquecíveis em Moçambique." },
       { property: "og:url", content: "/eventos" },
-      { property: "og:image", content: eventWedding },
+      { property: "og:image", content: eventosHeroAsset.url },
     ],
     links: [{ rel: "canonical", href: "/eventos" }],
   }),
