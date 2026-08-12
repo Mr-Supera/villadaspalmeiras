@@ -71,7 +71,7 @@ function Contactos() {
         kicker="Fale connosco"
         title="Contactos"
         subtitle="Estamos disponíveis para esclarecer qualquer dúvida e ajudar a planear a sua estadia."
-        image={contactosExteriorImg.url}
+        image={contactosHeroImg.url}
       />
 
       <section className="py-24 sm:py-32">
