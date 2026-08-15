@@ -7,40 +7,81 @@ import { Lightbox } from "../components/Lightbox";
 
 import galeriaHeroAsset from "../assets/galeria-hero.jpg.asset.json";
 const heroImg = galeriaHeroAsset.url;
-import roomSuite from "../assets/room-suite.jpg";
-import roomDouble from "../assets/room-double.jpg";
-import roomSingle from "../assets/room-single.jpg";
-import roomFamily from "../assets/room-family.jpg";
-import restaurantImg from "../assets/restaurant.jpg";
-import restaurantOutdoor from "../assets/restaurant-outdoor.jpg";
-import foodImg from "../assets/food.jpg";
-import poolImg from "../assets/pool.jpg";
-import gardenImg from "../assets/garden.jpg";
-import lobbyImg from "../assets/lobby.jpg";
-import eventWedding from "../assets/event-wedding.jpg";
-import eventConference from "../assets/event-conference.jpg";
-import eventBirthday from "../assets/event-birthday.jpg";
+import sobreEdificio from "../assets/sobre-edificio.jpg.asset.json";
+import contactosExterior from "../assets/contactos-exterior.jpg.asset.json";
+import quartoStd1 from "../assets/quarto-standard-1.jpg.asset.json";
+import quartoStd2 from "../assets/quarto-standard-2.jpg.asset.json";
+import quartoStdVarandaFrontal from "../assets/quarto-standard-varanda-frontal.jpg.asset.json";
+import quartoStdVarandaPrivada from "../assets/quarto-standard-varanda-privada.jpg.asset.json";
+import quartoExec2 from "../assets/quarto-executivo-2.jpg.asset.json";
+import quartoExec4 from "../assets/quarto-executivo-4.jpg.asset.json";
+import quartoExec5 from "../assets/quarto-executivo-5.jpg.asset.json";
+import quartoExec9 from "../assets/quarto-executivo-9.jpg.asset.json";
+import quartoExecBanho from "../assets/quarto-executivo-casa-banho.jpg.asset.json";
+import restauranteHero from "../assets/restaurant-hero.jpg.asset.json";
+import pratos from "../assets/villa-das-palmeiras-pratos.png.asset.json";
+import pratos2 from "../assets/villa-das-palmeiras-pratos-2.png.asset.json";
+import pratos3 from "../assets/villa-das-palmeiras-pratos-3.png.asset.json";
+import piscina1 from "../assets/piscina-img_0806-2.jpg.asset.json";
+import piscina2 from "../assets/piscina-img_0807.jpg.asset.json";
+import piscina3 from "../assets/piscina-img_0816.jpg.asset.json";
+import piscina4 from "../assets/piscina-img_0817.jpg.asset.json";
+import piscina5 from "../assets/piscina-img_0870.jpg.asset.json";
+import piscinaSobre from "../assets/sobre-piscina.jpg.asset.json";
+import villaPoolReal from "../assets/villa-pool-real.jpg.asset.json";
+import villaPoolGarden from "../assets/villa-pool-garden.jpg.asset.json";
+import villaGardenPool from "../assets/villa-garden-pool.jpg.asset.json";
+import eventoBaloes from "../assets/evento-baloes.jpg.asset.json";
+import eventoMesaPosta from "../assets/evento-mesa-posta.jpg.asset.json";
+import eventoMesaDetalhe from "../assets/evento-mesa-detalhe.jpg.asset.json";
+import eventoSalaoDecorado from "../assets/evento-salao-decorado.jpg.asset.json";
+import eventoSalaoVazio from "../assets/evento-salao-vazio.jpg.asset.json";
+import eventoPergula1 from "../assets/evento-pergula-1.webp.asset.json";
+import eventoPergula2 from "../assets/evento-pergula-2.webp.asset.json";
+import eventoArLivre from "../assets/evento-ar-livre.webp.asset.json";
+import eventoInsuflavel from "../assets/evento-insuflavel.webp.asset.json";
 
-type Cat = "Todos" | "Hotel" | "Quartos" | "Restaurante" | "Piscina" | "Eventos" | "Exterior";
+type Cat = "Todos" | "Hotel" | "Quartos" | "Restaurante" | "Piscina" | "Eventos";
 
 const items: { src: string; alt: string; cat: Exclude<Cat, "Todos"> }[] = [
-  { src: heroImg, alt: "Villa das Palmeiras ao pôr do sol", cat: "Hotel" },
-  { src: lobbyImg, alt: "Lobby principal", cat: "Hotel" },
-  { src: roomSuite, alt: "Suíte de Luxo", cat: "Quartos" },
-  { src: roomDouble, alt: "Quarto Duplo", cat: "Quartos" },
-  { src: roomSingle, alt: "Quarto Individual", cat: "Quartos" },
-  { src: roomFamily, alt: "Quarto Familiar", cat: "Quartos" },
-  { src: restaurantImg, alt: "Restaurante interior", cat: "Restaurante" },
-  { src: restaurantOutdoor, alt: "Esplanada do restaurante", cat: "Restaurante" },
-  { src: foodImg, alt: "Prato gourmet", cat: "Restaurante" },
-  { src: poolImg, alt: "Piscina ao pôr do sol", cat: "Piscina" },
-  { src: eventWedding, alt: "Casamento ao ar livre", cat: "Eventos" },
-  { src: eventConference, alt: "Sala de conferências", cat: "Eventos" },
-  { src: eventBirthday, alt: "Salão de festas", cat: "Eventos" },
-  { src: gardenImg, alt: "Jardim tropical", cat: "Exterior" },
+  { src: heroImg, alt: "Villa das Palmeiras", cat: "Hotel" },
+  { src: sobreEdificio.url, alt: "Edifício da Villa das Palmeiras", cat: "Hotel" },
+  { src: contactosExterior.url, alt: "Exterior dos quartos", cat: "Hotel" },
+  { src: quartoStd1.url, alt: "Quarto Standard", cat: "Quartos" },
+  { src: quartoStd2.url, alt: "Quarto Standard", cat: "Quartos" },
+  { src: quartoStdVarandaFrontal.url, alt: "Quarto Standard — varanda frontal", cat: "Quartos" },
+  { src: quartoStdVarandaPrivada.url, alt: "Quarto Standard — varanda privada", cat: "Quartos" },
+  { src: quartoExec2.url, alt: "Quarto Executivo", cat: "Quartos" },
+  { src: quartoExec4.url, alt: "Quarto Executivo", cat: "Quartos" },
+  { src: quartoExec5.url, alt: "Quarto Executivo", cat: "Quartos" },
+  { src: quartoExec9.url, alt: "Quarto Executivo", cat: "Quartos" },
+  { src: quartoExecBanho.url, alt: "Quarto Executivo — casa de banho", cat: "Quartos" },
+  { src: restauranteHero.url, alt: "Restaurante", cat: "Restaurante" },
+  { src: pratos.url, alt: "Pratos da Villa das Palmeiras", cat: "Restaurante" },
+  { src: pratos2.url, alt: "Mariscos e saladas", cat: "Restaurante" },
+  { src: pratos3.url, alt: "Seleção de pratos", cat: "Restaurante" },
+  { src: piscina1.url, alt: "Piscina com mural marinho", cat: "Piscina" },
+  { src: piscina2.url, alt: "Piscina e espreguiçadeiras", cat: "Piscina" },
+  { src: piscina3.url, alt: "Piscina rodeada de palmeiras", cat: "Piscina" },
+  { src: piscina4.url, alt: "Piscina e zona de convívio", cat: "Piscina" },
+  { src: piscina5.url, alt: "Piscina ao sol", cat: "Piscina" },
+  { src: piscinaSobre.url, alt: "Piscina da Villa das Palmeiras", cat: "Piscina" },
+  { src: villaPoolReal.url, alt: "Piscina e jardim", cat: "Piscina" },
+  { src: villaPoolGarden.url, alt: "Piscina e jardim tropical", cat: "Piscina" },
+  { src: villaGardenPool.url, alt: "Jardim e piscina", cat: "Piscina" },
+  { src: eventoBaloes.url, alt: "Decoração com balões", cat: "Eventos" },
+  { src: eventoMesaPosta.url, alt: "Mesa posta para evento", cat: "Eventos" },
+  { src: eventoMesaDetalhe.url, alt: "Detalhe da mesa", cat: "Eventos" },
+  { src: eventoSalaoDecorado.url, alt: "Salão decorado", cat: "Eventos" },
+  { src: eventoSalaoVazio.url, alt: "Salão de festas", cat: "Eventos" },
+  { src: eventoPergula1.url, alt: "Pérgula para eventos", cat: "Eventos" },
+  { src: eventoPergula2.url, alt: "Pérgula com mesas", cat: "Eventos" },
+  { src: eventoArLivre.url, alt: "Evento ao ar livre", cat: "Eventos" },
+  { src: eventoInsuflavel.url, alt: "Insuflável para crianças", cat: "Eventos" },
 ];
 
-const cats: Cat[] = ["Todos", "Hotel", "Quartos", "Restaurante", "Piscina", "Eventos", "Exterior"];
+const cats: Cat[] = ["Todos", "Hotel", "Quartos", "Restaurante", "Piscina", "Eventos"];
+
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
