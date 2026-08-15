@@ -40,6 +40,10 @@ import eventoPergula1 from "../assets/evento-pergula-1.webp.asset.json";
 import eventoPergula2 from "../assets/evento-pergula-2.webp.asset.json";
 import eventoArLivre from "../assets/evento-ar-livre.webp.asset.json";
 import eventoInsuflavel from "../assets/evento-insuflavel.webp.asset.json";
+import eventoMesaRosa from "../assets/evento-img_1567.webp.asset.json";
+import eventoBilhar from "../assets/evento-img_1597.webp.asset.json";
+import eventoBebida from "../assets/evento-img_1627.webp.asset.json";
+import eventoPergulaFesta from "../assets/evento-img_1662.webp.asset.json";
 
 type Cat = "Todos" | "Hotel" | "Quartos" | "Restaurante" | "Piscina" | "Eventos";
 
