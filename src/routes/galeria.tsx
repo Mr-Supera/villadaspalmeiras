@@ -40,6 +40,10 @@ import eventoPergula1 from "../assets/evento-pergula-1.webp.asset.json";
 import eventoPergula2 from "../assets/evento-pergula-2.webp.asset.json";
 import eventoArLivre from "../assets/evento-ar-livre.webp.asset.json";
 import eventoInsuflavel from "../assets/evento-insuflavel.webp.asset.json";
+import eventoMesaRosa from "../assets/evento-img_1567.webp.asset.json";
+import eventoBilhar from "../assets/evento-img_1597.webp.asset.json";
+import eventoBebida from "../assets/evento-img_1627.webp.asset.json";
+import eventoPergulaFesta from "../assets/evento-img_1662.webp.asset.json";
 
 type Cat = "Todos" | "Hotel" | "Quartos" | "Restaurante" | "Piscina" | "Eventos";
 
@@ -78,6 +82,10 @@ const items: { src: string; alt: string; cat: Exclude<Cat, "Todos"> }[] = [
   { src: eventoPergula2.url, alt: "Pérgula com mesas", cat: "Eventos" },
   { src: eventoArLivre.url, alt: "Evento ao ar livre", cat: "Eventos" },
   { src: eventoInsuflavel.url, alt: "Insuflável para crianças", cat: "Eventos" },
+  { src: eventoMesaRosa.url, alt: "Mesa decorada em rosa na pérgula", cat: "Eventos" },
+  { src: eventoBilhar.url, alt: "Mesa de bilhar no salão", cat: "Eventos" },
+  { src: eventoBebida.url, alt: "Serviço de bebidas", cat: "Eventos" },
+  { src: eventoPergulaFesta.url, alt: "Festa na pérgula com convidados", cat: "Eventos" },
 ];
 
 const cats: Cat[] = ["Todos", "Hotel", "Quartos", "Restaurante", "Piscina", "Eventos"];
