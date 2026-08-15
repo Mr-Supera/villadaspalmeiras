@@ -56,7 +56,7 @@ function Home() {
           playsInline
           poster={heroImg}
           className="absolute inset-0 size-full object-cover"
-          aria-label="Villa das Palmeiras ao pôr do sol com palmeiras e piscina"
+          aria-label="Piscina da Villa das Palmeiras rodeada de jardim tropical e palmeiras"
         >
           <source src={villaPromoAsset.url} type="video/webm" />
         </video>
