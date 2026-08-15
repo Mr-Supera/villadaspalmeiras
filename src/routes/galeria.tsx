@@ -82,6 +82,10 @@ const items: { src: string; alt: string; cat: Exclude<Cat, "Todos"> }[] = [
   { src: eventoPergula2.url, alt: "Pérgula com mesas", cat: "Eventos" },
   { src: eventoArLivre.url, alt: "Evento ao ar livre", cat: "Eventos" },
   { src: eventoInsuflavel.url, alt: "Insuflável para crianças", cat: "Eventos" },
+  { src: eventoMesaRosa.url, alt: "Mesa decorada em rosa na pérgula", cat: "Eventos" },
+  { src: eventoBilhar.url, alt: "Mesa de bilhar no salão", cat: "Eventos" },
+  { src: eventoBebida.url, alt: "Serviço de bebidas", cat: "Eventos" },
+  { src: eventoPergulaFesta.url, alt: "Festa na pérgula com convidados", cat: "Eventos" },
 ];
 
 const cats: Cat[] = ["Todos", "Hotel", "Quartos", "Restaurante", "Piscina", "Eventos"];
