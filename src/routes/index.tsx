@@ -6,7 +6,8 @@ import { Reveal } from "../components/Reveal";
 import { whatsappLink } from "../lib/site";
 
 import villaPromoAsset from "../assets/villa-promo.webm.asset.json";
-import heroImg from "../assets/hero.jpg";
+import heroPosterAsset from "../assets/hero-poster.jpg.asset.json";
+const heroImg = heroPosterAsset.url;
 import roomSuiteAsset from "../assets/villa-room-real.png.asset.json";
 const roomSuite = roomSuiteAsset.url;
 import restaurantAsset from "../assets/villa-das-palmeiras-pratos-3.png.asset.json";
@@ -55,7 +56,7 @@ function Home() {
           playsInline
           poster={heroImg}
           className="absolute inset-0 size-full object-cover"
-          aria-label="Villa das Palmeiras ao pôr do sol com palmeiras e piscina"
+          aria-label="Piscina da Villa das Palmeiras rodeada de jardim tropical e palmeiras"
         >
           <source src={villaPromoAsset.url} type="video/webm" />
         </video>
