@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// TODO: substituir pelo URL real do projeto quando o domínio estiver configurado.
-const BASE_URL = "";
+const BASE_URL = "https://villadaspalmeiras.lovable.app";
 
 interface SitemapEntry {
   path: string;
