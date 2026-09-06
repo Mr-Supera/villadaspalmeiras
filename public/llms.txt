@@ -1,0 +1,15 @@
+# Villa das Palmeiras
+
+> Hotel, restaurante e espaço para eventos em Maputo, KaTembe (KhaElisa), Moçambique. Reservas e orçamentos via WhatsApp.
+
+## Páginas
+
+- [Início](/): Apresentação do hotel, restaurante, eventos e reservas por WhatsApp.
+- [Sobre Nós](/sobre): A história e os valores da Villa das Palmeiras.
+- [Quartos](/quartos): Quarto Standard e Quarto Executivo, comodidades e preços.
+- [Restaurante](/restaurante): Cozinha moçambicana e internacional, horários e menu.
+- [Eventos](/eventos): Salão de festas, área ao ar livre, pérgula e sala privada.
+- [Mini Zoológico](/minizoo): Póneis, araras, avestruzes e outros animais.
+- [Sala de Conferências](/conferencias): Espaço para reuniões e formações (brevemente).
+- [Galeria](/galeria): Fotografias do hotel, quartos, restaurante, piscina e eventos.
+- [Contactos](/contactos): Morada, telefone, email, mapa e formulário de contacto.
