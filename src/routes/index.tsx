@@ -23,7 +23,7 @@ const gardenImg = gardenAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Villa das Palmeiras — Hotel, Restaurante e Eventos em Moçambique" },
+      { title: "Villa das Palmeiras — Hotel e Eventos em Moçambique" },
       {
         name: "description",
         content:
