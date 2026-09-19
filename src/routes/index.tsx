@@ -73,6 +73,9 @@ function Home() {
           <h1 className="heading-serif mt-5 text-4xl sm:text-6xl md:text-7xl text-white animate-fade-soft [animation-delay:120ms]">
             Bem-vindo à<br />
             <em className="not-italic text-[color:var(--gold-soft)]">Villa das Palmeiras</em>
+            <span className="mt-4 block text-base sm:text-xl md:text-2xl font-light tracking-wide text-white/90">
+              Hotel · Restaurante · Eventos
+            </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-white/85 leading-relaxed animate-fade-soft [animation-delay:240ms]">
             O lugar perfeito para descansar, celebrar e criar memórias inesquecíveis.
