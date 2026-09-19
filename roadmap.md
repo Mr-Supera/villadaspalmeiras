@@ -7,6 +7,6 @@
    - [ ] Marcar finding `gsc:gsc` como corrigido
 
 2. Melhorar títulos/conteúdo descritivo
-   - [ ] Reescrever H1 da homepage em `src/routes/index.tsx`
-   - [ ] Reescrever H1 e texto de `src/routes/conferencias.tsx`
-   - [ ] Marcar finding `agent_content:content` como corrigido
+   - [x] Reescrever H1 da homepage em `src/routes/index.tsx`
+   - [x] Reescrever H1 e texto de `src/routes/conferencias.tsx`
+   - [x] Marcar finding `agent_content:content` como corrigido
