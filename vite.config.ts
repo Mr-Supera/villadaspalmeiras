@@ -1,18 +1,12 @@
-import { defineConfig } from "vite";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import viteReact from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-import tsConfigPaths from "vite-tsconfig-paths";
-import { nitro } from "nitro/vite";
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Lovable's wrapper sets the deployable dist/ output layout, sandbox preview
+// shape and diagnostics. The custom SSR entry (src/server.ts) and the Nitro
+// node-server preset used for local builds are preserved via the passthrough
+// options; inside Lovable builds LOVABLE_NITRO_PRESET pins the real target.
 export default defineConfig({
-  plugins: [
-    tsConfigPaths(),
-    tailwindcss(),
-    tanstackStart({
-      server: { entry: "server" },
-    }),
-    nitro({ config: { preset: "node-server" } }),
-    viteReact(),
-  ],
+  tanstackStart: {
+    server: { entry: "server" },
+  },
+  nitro: { preset: "node-server" },
 });
