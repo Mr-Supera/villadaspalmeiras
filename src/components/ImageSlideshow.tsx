@@ -24,7 +24,7 @@ export function ImageSlideshow({ images, intervalMs = 3000, className = "" }: Pr
           key={img.src}
           src={img.src}
           alt={img.alt}
-          loading={i === 0 ? "eager" : "lazy"}
+          loading="lazy"
           width={1600}
           height={1200}
           className={`absolute inset-0 size-full object-cover transition-opacity duration-700 ease-in-out ${

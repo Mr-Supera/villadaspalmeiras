@@ -159,7 +159,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative pt-40 pb-24 sm:pt-48 sm:pb-32 text-white overflow-hidden">
-      <img loading="lazy" decoding="async"
+      <img decoding="async"
         src={image}
         alt=""
         className="absolute inset-0 size-full object-cover"
