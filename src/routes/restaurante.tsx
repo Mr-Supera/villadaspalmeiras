@@ -56,7 +56,7 @@ function Restaurante() {
       <section className="py-24 sm:py-32">
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
-            <img
+            <img decoding="async"
               src={restaurantDishes}
               alt="Seleção de pratos moçambicanos e internacionais do restaurante da Villa das Palmeiras"
               loading="lazy"

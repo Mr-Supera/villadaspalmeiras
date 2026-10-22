@@ -162,7 +162,7 @@ function Galeria() {
                   className="group relative block w-full aspect-[4/5] overflow-hidden rounded-2xl"
                   aria-label={`Ampliar imagem: ${img.alt}`}
                 >
-                  <img
+                  <img decoding="async"
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"

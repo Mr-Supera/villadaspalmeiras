@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight, Presentation } from "lucide-react";
 
 import { SectionTitle } from "../components/SectionTitle";
@@ -45,12 +46,23 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsWideScreen(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
   return (
     <>
       {/* HERO */}
       <section className="relative min-h-[100svh] flex items-center justify-center text-white overflow-hidden">
         <video
-          autoPlay
+          autoPlay={isWideScreen}
+          preload="metadata"
           muted
           loop
           playsInline
@@ -172,7 +184,7 @@ function Home() {
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
             <div className="relative">
-              <img
+              <img decoding="async"
                 src={gardenImg}
                 alt="Jardim tropical da Villa das Palmeiras com palmeiras e flores"
                 loading="lazy"
@@ -237,7 +249,7 @@ function Home() {
           <div className="mt-16 grid gap-6 md:grid-cols-2">
             <Reveal>
               <div className="relative overflow-hidden rounded-2xl aspect-[4/5] group">
-                <img
+                <img decoding="async"
                   src={roomSuite}
                   alt="Suíte Villa das Palmeiras"
                   loading="lazy"
@@ -258,7 +270,7 @@ function Home() {
 
             <Reveal delay={120}>
               <div className="relative overflow-hidden rounded-2xl aspect-[4/5] group">
-                <img
+                <img decoding="async"
                   src={poolImg}
                   alt="Piscina rodeada de palmeiras"
                   loading="lazy"
@@ -291,7 +303,7 @@ function Home() {
 
       {/* RESTAURANTE preview */}
       <section className="relative py-24 sm:py-32 text-white overflow-hidden">
-        <img
+        <img decoding="async"
           src={restaurantImg}
           alt="Seleção de pratos do restaurante da Villa das Palmeiras"
           loading="lazy"
@@ -353,6 +365,7 @@ function Home() {
             <video
               src={eventVideoAsset.url}
               autoPlay
+              preload="metadata"
               muted
               loop
               playsInline

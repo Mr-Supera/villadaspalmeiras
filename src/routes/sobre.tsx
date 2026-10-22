@@ -39,7 +39,7 @@ function Sobre() {
       <section className="py-24 sm:py-32">
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
-            <img
+            <img decoding="async"
               src={lobbyImg}
               alt="Vista exterior da Villa das Palmeiras rodeada de jardim tropical"
               loading="lazy"
@@ -159,7 +159,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative pt-40 pb-24 sm:pt-48 sm:pb-32 text-white overflow-hidden">
-      <img
+      <img loading="lazy" decoding="async"
         src={image}
         alt=""
         className="absolute inset-0 size-full object-cover"

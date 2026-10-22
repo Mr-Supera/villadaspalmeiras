@@ -20,7 +20,7 @@ export function ImageSlideshow({ images, intervalMs = 3000, className = "" }: Pr
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {images.map((img, i) => (
-        <img
+        <img decoding="async"
           key={img.src}
           src={img.src}
           alt={img.alt}

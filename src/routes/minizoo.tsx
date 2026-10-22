@@ -100,7 +100,7 @@ function Minizoo() {
       <section className="py-24 sm:py-32">
         <div className="container-luxe grid gap-16 lg:grid-cols-2 items-center">
           <Reveal>
-            <img
+            <img decoding="async"
               src={poneisAsset.url}
               alt="Póneis a pastar no jardim tropical da Villa das Palmeiras"
               loading="lazy"
@@ -174,7 +174,7 @@ function Minizoo() {
           <div className="mt-16 grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-4">
             {gallery.map((g, i) => (
               <Reveal key={g.url} delay={i * 80} className={g.span}>
-                <img
+                <img height={1067} width={1600} decoding="async"
                   src={g.url}
                   alt={g.alt}
                   loading="lazy"

@@ -128,7 +128,7 @@ function Eventos() {
                   aria-label={`Ampliar imagem: ${p.alt}`}
                   className={`group block h-full w-full overflow-hidden rounded-2xl shadow-[var(--shadow-luxe)] transition-transform duration-500 ${p.rot} hover:rotate-0 hover:z-10 relative`}
                 >
-                  <img
+                  <img height={1067} width={1600} decoding="async"
                     src={p.src}
                     alt={p.alt}
                     loading="lazy"

@@ -62,7 +62,7 @@ export function Lightbox({ images, index, onClose, onIndexChange }: Props) {
         <ChevronLeft className="size-6" />
       </button>
 
-      <img
+      <img loading="lazy" height={1067} width={1600} decoding="async"
         src={current.src}
         alt={current.alt}
         className="max-h-[85vh] max-w-full object-contain shadow-2xl"
