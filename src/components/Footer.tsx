@@ -14,6 +14,8 @@ export function Footer() {
             className="h-14 w-auto rounded-sm"
             loading="lazy"
             decoding="async"
+            width={138}
+            height={102}
           />
           <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-xs">
             Um refúgio elegante em Moçambique, onde o conforto, a gastronomia e a hospitalidade se unem para criar memórias inesquecíveis.

@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { PartyPopper, Trees, DoorClosed, Sparkles, MessageCircle } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
-import { Lightbox } from "../components/Lightbox";
+const Lightbox = lazy(() => import("../components/Lightbox").then((m) => ({ default: m.Lightbox })));
 import { whatsappLink } from "../lib/site";
 import eventosHeroAsset from "../assets/eventos-hero.webp.asset.json";
 import imgBaloes from "../assets/evento-baloes.jpg.asset.json";
@@ -160,12 +160,14 @@ function Eventos() {
       </section>
 
       {lightbox !== null && (
-        <Lightbox
-          images={photos.map((p) => ({ src: p.src, alt: p.alt }))}
-          index={lightbox}
-          onClose={() => setLightbox(null)}
-          onIndexChange={setLightbox}
-        />
+        <Suspense fallback={null}>
+          <Lightbox
+            images={photos.map((p) => ({ src: p.src, alt: p.alt }))}
+            index={lightbox}
+            onClose={() => setLightbox(null)}
+            onIndexChange={setLightbox}
+          />
+        </Suspense>
       )}
     </>
   );

@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import { SectionTitle } from "../components/SectionTitle";
 import { Reveal } from "../components/Reveal";
 import { PageHero } from "./sobre";
-import { Lightbox } from "../components/Lightbox";
+const Lightbox = lazy(() => import("../components/Lightbox").then((m) => ({ default: m.Lightbox })));
 
 import galeriaHeroAsset from "../assets/galeria-hero.jpg.asset.json";
 const heroImg = galeriaHeroAsset.url;
@@ -182,12 +182,14 @@ function Galeria() {
       </section>
 
       {lightbox !== null && (
-        <Lightbox
-          images={filtered.map((i) => ({ src: i.src, alt: i.alt }))}
-          index={lightbox}
-          onClose={() => setLightbox(null)}
-          onIndexChange={setLightbox}
-        />
+        <Suspense fallback={null}>
+          <Lightbox
+            images={filtered.map((i) => ({ src: i.src, alt: i.alt }))}
+            index={lightbox}
+            onClose={() => setLightbox(null)}
+            onIndexChange={setLightbox}
+          />
+        </Suspense>
       )}
     </>
   );
