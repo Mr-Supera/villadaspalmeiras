@@ -90,7 +90,7 @@ function Restaurante() {
               </ul>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
-                  href="https://villa-menu-flow.base44.app/"
+                  href="https://menuvp.lovable.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold"
