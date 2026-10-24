@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MessageCircle, BedDouble, UtensilsCrossed, Sparkles, Wifi, Snowflake, ShieldCheck, MapPin, Star, ArrowRight, Presentation } from "lucide-react";
 
 import { SectionTitle } from "../components/SectionTitle";
@@ -39,7 +39,15 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" } as never,
+      {
+        rel: "preload",
+        as: "image",
+        type: "image/webp",
+        href: "/images/hero-poster-1280.webp",
+        imageSrcSet: "/images/hero-poster-640.webp 640w, /images/hero-poster-1280.webp 1280w",
+        imageSizes: "100vw",
+        fetchpriority: "high",
+      } as never,
     ],
   }),
   component: Home,
@@ -47,6 +55,8 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const [isWideScreen, setIsWideScreen] = useState(false);
+  const [isEventVideoVisible, setIsEventVideoVisible] = useState(false);
+  const eventVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const media = window.matchMedia("(min-width: 768px)");
@@ -56,22 +66,57 @@ function Home() {
     return () => media.removeEventListener("change", update);
   }, []);
 
+  useEffect(() => {
+    const video = eventVideoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsEventVideoVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [isWideScreen]);
+
   return (
     <>
       {/* HERO */}
       <section className="relative min-h-[100svh] flex items-center justify-center text-white overflow-hidden">
-        <video
-          autoPlay={isWideScreen}
-          preload="metadata"
-          muted
-          loop
-          playsInline
-          poster={heroImg}
-          className="absolute inset-0 size-full object-cover"
-          aria-label="Piscina da Villa das Palmeiras rodeada de jardim tropical e palmeiras"
-        >
-          <source src={villaPromoAsset.url} type="video/webm" />
-        </video>
+        <picture className="absolute inset-0 size-full">
+          <source
+            type="image/webp"
+            srcSet="/images/hero-poster-640.webp 640w, /images/hero-poster-1280.webp 1280w"
+            sizes="100vw"
+          />
+          <img
+            src={heroImg}
+            sizes="100vw"
+            alt=""
+            width={1920}
+            height={1280}
+            fetchPriority="high"
+            decoding="async"
+            className="size-full object-cover"
+          />
+        </picture>
+        {isWideScreen && (
+          <video
+            autoPlay
+            preload="none"
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 size-full object-cover"
+            aria-label="Piscina da Villa das Palmeiras rodeada de jardim tropical e palmeiras"
+          >
+            <source src={villaPromoAsset.url} type="video/webm" />
+          </video>
+        )}
         <div
           className="absolute inset-0 bg-gradient-to-b from-[color:var(--forest-deep)]/70 via-[color:var(--forest-deep)]/40 to-[color:var(--forest-deep)]/80"
           aria-hidden
@@ -363,9 +408,10 @@ function Home() {
           </Reveal>
           <Reveal delay={150}>
             <video
+              ref={eventVideoRef}
               src={eventVideoAsset.url}
-              autoPlay
-              preload="metadata"
+              autoPlay={isEventVideoVisible}
+              preload={isEventVideoVisible ? "metadata" : "none"}
               muted
               loop
               playsInline

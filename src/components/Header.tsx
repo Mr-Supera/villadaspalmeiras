@@ -56,6 +56,8 @@ export function Header() {
               className="h-10 sm:h-11 w-auto"
               loading="eager"
               decoding="async"
+              width={138}
+              height={102}
             />
           </span>
         </Link>

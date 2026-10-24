@@ -162,6 +162,7 @@ export function PageHero({
       <img decoding="async"
         src={image}
         alt=""
+        loading="lazy"
         className="absolute inset-0 size-full object-cover"
         width={1600}
         height={1067}

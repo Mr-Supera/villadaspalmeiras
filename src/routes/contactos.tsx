@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { SectionTitle } from "../components/SectionTitle";
@@ -193,6 +193,25 @@ function Contactos() {
 
 function MapEmbed() {
   const [mapSrc, setMapSrc] = useState(site.mapEmbed);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const browserKey = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY;
@@ -204,8 +223,8 @@ function MapEmbed() {
   }, []);
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-border aspect-[16/9] bg-[color:var(--cream)]">
-      <iframe
+    <div ref={containerRef} className="rounded-2xl overflow-hidden border border-border aspect-[16/9] bg-[color:var(--cream)]">
+      {isVisible && <iframe
         title="Localização da Villa das Palmeiras"
         src={mapSrc}
         width="100%"
@@ -214,7 +233,7 @@ function MapEmbed() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         allowFullScreen
-      />
+      />}
     </div>
   );
 }
